@@ -39,8 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-\ninfra/lambda.zip
-\ninfra/.terraform
-\ninfra/.terraform.lock.hcl
+infra/lambda.zip
+infra/.terraform
+infra/.terraform.lock.hcl
 *.tfstate
 *.tfstate.*
