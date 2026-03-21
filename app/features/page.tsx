@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import ComparisonTable from '../../components/ComparisonTable';
 import { 
   Network, 
   Share2, 
@@ -333,6 +334,9 @@ export default function FeaturesPage() {
         </div>
 
       </div>
+
+      {/* Comparison Table */}
+      <ComparisonTable />
 
       {/* Hero CTA */}
       <section className="bg-slate-900 py-20 px-6 sm:px-12 mt-20">
