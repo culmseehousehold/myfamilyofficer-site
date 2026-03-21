@@ -38,10 +38,21 @@ It will output two values:
 2.  Paste the `function_url` as the value for `NEXT_PUBLIC_API_URL`.
 
 ## 4. Setup GitHub Deployment
+To enable secure, automated deployments via GitHub Actions:
+
+### 1. Create Dedicated IAM User (Best Practice)
+Instead of using your root/admin keys, create a limited-privilege user for GitHub:
+- **User Name**: `github-deploy-user-myfamilyofficersite`
+- **Policy Name**: `GitHubDeploy-MyFamilyOfficer-Site`
+- **Permissions**: This user only has permission to `s3:PutObject` (write) to the specific `www.myfamilyofficer.com` bucket. It cannot access any other AWS resources.
+
+### 2. Configure GitHub Secrets
 1.  Push this code to a GitHub repository.
 2.  Go to **Settings > Secrets and variables > Actions**.
-3.  Add the following Repository Secrets:
-    *   `AWS_ACCESS_KEY_ID`: Your AWS Access Key.
-    *   `AWS_SECRET_ACCESS_KEY`: Your AWS Secret Key.
+3.  Add the following Repository Secrets using the Access Keys generated for the user above:
+    *   `AWS_ACCESS_KEY_ID`: The IAM User's Access Key.
+    *   `AWS_SECRET_ACCESS_KEY`: The IAM User's Secret Key.
     *   `NEXT_PUBLIC_API_URL`: The `function_url` from step 2 (e.g. `https://...`).
-4.  **Create a Release**: When you create a new Release in GitHub (e.g. `v1.0.0`), the workflow will automatically build and deploy to S3.
+
+### 3. Deploy via Release
+**Create a Release**: When you create a new Release in GitHub (e.g. `v1.1.0`), the workflow will automatically build the Next.js site and sync it to S3 using these secure credentials.

@@ -25,3 +25,4 @@ This project is a sophisticated marketing website for "FamilyOfficer", built wit
 - When editing the frontend, ensure design consistency with the "sophisticated/high-end" aesthetic.
 - When modifying infrastructure, update Terraform configurations in `/infra`.
 - When updating dependencies, ensure compatibility with Next.js 16 and Node.js 20.
+- **Deployment**: The GitHub Action uses a dedicated IAM user (`github-deploy-user-myfamilyofficersite`) with limited permissions (S3 sync only). Do not use root credentials for CI/CD.
