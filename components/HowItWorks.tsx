@@ -1,29 +1,29 @@
 // components/HowItWorks.tsx
 import React from 'react';
-import { DownloadCloud, Sparkles, RefreshCw, FileText } from 'lucide-react';
+import { DownloadCloud, Sparkles, RefreshCw, FileText, ShieldCheck } from 'lucide-react';
 
 const steps = [
   {
-    name: 'Ingest',
-    description: 'Connect your bank feeds and broker accounts. Drag and drop contract notes or forward detailed statements via email.',
+    name: 'Ingest & Reconcile',
+    description: 'Connect bank feeds and drag-and-drop statements. Our AI auto-matches transactions and flags exceptions for your review.',
     icon: DownloadCloud,
     number: '01',
   },
   {
-    name: 'Process',
-    description: 'Our AI automatically extracts data, categorizes transactions, and identifies investment events (buys, sells, dividends).',
-    icon: Sparkles,
+    name: 'Govern & Decide',
+    description: 'Run board meetings with AI-generated agendas. Make distribution decisions and digitally sign minutes with cryptographic verification.',
+    icon: ShieldCheck,
     number: '02',
   },
   {
-    name: 'Reconcile',
-    description: 'The system matches documentation to cash movements in seconds, flagging only the exceptions that need your attention.',
-    icon: RefreshCw,
+    name: 'Analyze & Optimize',
+    description: 'Model tax scenarios and review performance against benchmarks. Use AI to surface risks and opportunities across the portfolio.',
+    icon: Sparkles,
     number: '03',
   },
   {
-    name: 'Report',
-    description: 'Generate board-ready performance reports and tax packs with a single click.',
+    name: 'Comply & Report',
+    description: 'Generate SMSF member statements and full tax packs in one click. Maintain a complete audit trail for peace of mind.',
     icon: FileText,
     number: '04',
   },

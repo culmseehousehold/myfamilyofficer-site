@@ -8,11 +8,11 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Features', href: '#features' },
-    { name: 'How It Works', href: '#how-it-works' },
+    { name: 'Features', href: '/features' },
+    { name: 'How It Works', href: '/#how-it-works' },
     // { name: 'Pricing', href: '#pricing' }, // Pricing not specifically asked for in section list, but "Pricing" is in Navbar requiremens
     { name: 'Pricing', href: '#' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Contact', href: '/#contact' },
   ];
 
   return (

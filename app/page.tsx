@@ -1,6 +1,7 @@
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import ValueProp from '../components/ValueProp';
+import PersonaSection from '../components/PersonaSection';
 import Features from '../components/Features';
 import HowItWorks from '../components/HowItWorks';
 import CtaSection from '../components/CtaSection';
@@ -12,6 +13,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <ValueProp />
+      <PersonaSection />
       <Features />
       <HowItWorks />
       <CtaSection />
