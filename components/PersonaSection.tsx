@@ -1,52 +1,87 @@
 'use client';
 
 import React from 'react';
-import { Shield, TrendingUp, Zap, Check, ArrowRight } from 'lucide-react';
-import Link from 'next/link';
+import { Shield, TrendingUp, Zap, Check, Users, Scale, FileText } from 'lucide-react';
 
 const personas = [
   {
     id: 'principals',
-    title: 'For Principals & Trustees',
+    title: 'The Principal',
     subtitle: 'Governance & Legacy',
     icon: Shield,
-    description: 'Lead your family office with audit-ready confidence. From signing minutes to distribution planning—ensure every decision is compliant, documented, and secure.',
+    description: 'Lead with audit-ready confidence. From signing minutes to distribution planning—ensure every decision is compliant and documented.',
     benefits: [
-        'Automated Board Agendas & Minutes',
-        'Cryptographic Document Signing',
-        'Distribution Planning Workflows',
-        'Beneficiary & Entity Registers'
-    ],
-    cta: 'Visualize Your Legacy',
+        'Automated Board Agendas',
+        'Cryptographic Signing',
+        'Distribution Planning',
+        'Beneficiary Registers'
+    ]
   },
   {
-    id: 'investors',
-    title: 'For Advisors & CIOs',
+    id: 'advisers',
+    title: 'The Adviser',
     subtitle: 'Alpha & Analysis',
     icon: TrendingUp,
-    description: 'Arm your investment committee with institutional-grade insights. Use AI to model tax scenarios, benchmark performance, and turn data into defensive strategy.',
+    description: 'Arm your investment committee with institutional-grade insights. AI-powered portfolio reviews, trade idea workflows, and tax-aware scenarios.',
     benefits: [
-        'AI-Powered Portfolio Review',
-        'Tax-Aware Scenario Modeling',
-        'True TWR & Attribution Analysis',
-        'Private Market Integrations'
-    ],
-    cta: 'Enhance Decision Making',
+        'AI Portfolio Reviews',
+        'Trade Idea Workflows',
+        'Tax-Aware Scenarios',
+        'Private Market Data'
+    ]
   },
   {
     id: 'operations',
-    title: 'For Tax & Admin',
-    subtitle: 'Efficiency & Accuracy',
+    title: 'The Operations Lead',
+    subtitle: 'Efficiency & STP',
     icon: Zap,
-    description: 'Slash your compliance workload. Automate SMSF member statements, bank reconciliations, and tax pack generation with a system built for Australian complexity.',
+    description: 'Zero-touch document pipeline. Automate ingestion from email to general ledger, manage bank feeds, and streamline SMSF compliance.',
     benefits: [
-        'One-Click Tax Pack Generation',
-        'Automated Bank Feeds & Recs',
-        'SMSF Compliance & Cap Tracking',
-        'General Ledger Integration'
-    ],
-    cta: 'Streamline Operations',
+        'STP Document Ingestion',
+        'Automated Bank Recs',
+        'SMSF Compliance Engine',
+        'General Ledger Sync'
+    ]
   },
+  {
+    id: 'beneficiaries',
+    title: 'The Next Gen',
+    subtitle: 'Transparency & Access',
+    icon: Users,
+    description: 'Secure, branded portals for the family. Provide view-only access to trust distributions, tax statements, and financial literacy tools.',
+    benefits: [
+        'Branded Magic-Link Portal',
+        'Distribution Visibility',
+        'Tax Statement Access',
+        'Privacy-First View'
+    ]
+  },
+  {
+    id: 'compliance',
+    title: 'The Compliance Officer',
+    subtitle: 'Risk & Policy',
+    icon: Scale,
+    description: 'RAG-powered policy verification. Instantly answer "Is this allowed?" and verify adherence to trust deeds and investment mandates.',
+    benefits: [
+        'RAG Policy Search',
+        'Audit-Ready Trails',
+        'Role-Based Controls',
+        'Automated Checks'
+    ]
+  },
+  {
+    id: 'accountants',
+    title: 'The Accountant',
+    subtitle: 'Tax & Reporting',
+    icon: FileText,
+    description: 'Slash end-of-year friction. Access structured ledgers, tax packs, and reconciled transaction data directly—no more email ping-pong.',
+    benefits: [
+        'One-Click Tax Packs',
+        'Structured GL Exports',
+        'Real-Time Trial Balance',
+        'Distribution Verification'
+    ]
+  }
 ];
 
 export default function PersonaSection() {
@@ -59,59 +94,35 @@ export default function PersonaSection() {
             Built for Every Stakeholder
           </p>
           <p className="mt-4 text-lg leading-8 text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-            Whether you are preserving wealth, growing it, or managing it—FamilyOfficer creates a single source of truth.
+            Whether you are preserving wealth, growing it, or managing it—FamilyOfficer creates a single source of truth for your entire ecosystem.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
-          {personas.map((persona, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {personas.map((persona) => (
             <div 
                 key={persona.id}
-                className={`relative rounded-2xl p-8 transition-all duration-300 border ${
-                    index === 1 
-                    ? 'bg-slate-900 text-white border-slate-900 ring-1 ring-white/10 shadow-2xl scale-105 z-10' 
-                    : 'bg-slate-50 text-slate-900 border-slate-200 hover:border-indigo-200 hover:shadow-xl dark:bg-slate-800 dark:border-slate-700 dark:text-white'
-                }`}
+                className="relative rounded-2xl p-8 transition-all duration-300 border bg-slate-50 text-slate-900 border-slate-200 hover:border-indigo-200 hover:shadow-xl dark:bg-slate-800 dark:border-slate-700 dark:text-white group"
             >
-              <div className={`inline-flex items-center justify-center p-3 rounded-xl mb-6 ${
-                  index === 1 ? 'bg-indigo-500 text-white' : 'bg-white text-indigo-600 shadow-sm dark:bg-slate-700 dark:text-indigo-400'
-              }`}>
+              <div className="inline-flex items-center justify-center p-3 rounded-xl mb-6 bg-white text-indigo-600 shadow-sm dark:bg-slate-700 dark:text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
                 <persona.icon className="w-6 h-6" />
               </div>
 
               <h3 className="text-xl font-bold mb-2">{persona.title}</h3>
-              <p className={`text-sm font-medium mb-4 uppercase tracking-wider ${
-                  index === 1 ? 'text-indigo-200' : 'text-indigo-600 dark:text-indigo-400'
-              }`}>{persona.subtitle}</p>
+              <p className="text-sm font-medium mb-4 uppercase tracking-wider text-indigo-600 dark:text-indigo-400">{persona.subtitle}</p>
               
-              <p className={`mb-8 leading-relaxed ${
-                  index === 1 ? 'text-slate-300' : 'text-slate-600 dark:text-slate-300'
-              }`}>
+              <p className="mb-8 leading-relaxed text-slate-600 dark:text-slate-300">
                 {persona.description}
               </p>
               
               <ul className="space-y-4 mb-8">
                 {persona.benefits.map((benefit) => (
                   <li key={benefit} className="flex items-start gap-3">
-                    <Check className={`w-5 h-5 shrink-0 ${
-                        index === 1 ? 'text-indigo-400' : 'text-indigo-600'
-                    }`} />
+                    <Check className="w-5 h-5 shrink-0 text-indigo-600 dark:text-indigo-400" />
                     <span className="text-sm font-medium">{benefit}</span>
                   </li>
                 ))}
               </ul>
-
-              <Link 
-                href="/request-access"
-                className={`w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold transition-colors ${
-                    index === 1 
-                    ? 'bg-white text-slate-900 hover:bg-slate-100' 
-                    : 'bg-slate-900 text-white hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100'
-                }`}
-              >
-                {persona.cta}
-                <ArrowRight className="w-4 h-4" />
-              </Link>
             </div>
           ))}
         </div>

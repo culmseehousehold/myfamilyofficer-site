@@ -2,6 +2,11 @@ provider "aws" {
   region = "ap-southeast-2" # Sydney Region for Data Sovereignty
 }
 
+provider "aws" {
+  alias  = "us_east_1"
+  region = "us-east-1"
+}
+
 resource "aws_dynamodb_table" "leads" {
   name           = "FamilyOfficerLeads"
   billing_mode   = "PAY_PER_REQUEST"
