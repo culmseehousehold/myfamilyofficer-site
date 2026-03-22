@@ -32,6 +32,12 @@ const TOUR_GROUPS = [
     { title: "Liabilities & Borrowing", match: (id: string) => ["borrowings", "borrowingCapacity"].includes(id) },
     { title: "Entities & Structures", match: (id: string) => ["people", "entities", "entity-form", "smsfCompliance"].includes(id) },
     { title: "Risk & Protection", match: (id: string) => id.startsWith("risk-") },
+    { title: "Compliance", match: (id: string) => id.startsWith("compliance-") },
+    { title: "Workflows", match: (id: string) => id === "workflows" },
+    { title: "Meetings & Governance", match: (id: string) => ["meetings", "governance-verification"].includes(id) },
+    { title: "Distributions", match: (id: string) => id === "distributions" },
+    { title: "Reporting", match: (id: string) => id.startsWith("reports-") },
+    { title: "Other", match: () => true },
 ]
 
 function getGroupForStop(stopId: string) {
