@@ -3,16 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3003",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "start": "next start -p 3003",
+    "lint": "eslint",
+    "tour:capture": "node --env-file-if-exists=.env --env-file-if-exists=.env.local scripts/screenshot-tour.mjs",
+    "generate-tour-images": "node --env-file-if-exists=.env --env-file-if-exists=.env.local scripts/screenshot-tour.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.577.0",
     "next": "16.2.1",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -21,6 +24,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.1",
+    "playwright": "^1.58.2",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

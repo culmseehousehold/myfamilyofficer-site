@@ -1,0 +1,1875 @@
+[
+  {
+    "id": "dashboard",
+    "path": "/",
+    "title": "Workspace Dashboard",
+    "description": "Start here to monitor portfolio health, governance risk, and next actions.",
+    "steps": [
+      {
+        "title": "Read This As Your Daily Brief",
+        "body": "The dashboard surfaces portfolio value, compliance signals, and AI insights in one place.",
+        "highlights": [
+          "Use AI Insights to jump directly to issues that need action.",
+          "Treat this page as your daily operating view."
+        ]
+      },
+      {
+        "title": "Take Action Directly",
+        "body": "Cards and insight links are intended to route you straight into the right workflow.",
+        "highlights": [
+          "Resolve missing entity fields from entity records, not generic docs pages.",
+          "Use governance tasks as your execution queue."
+        ]
+      },
+      {
+        "title": "Pending Actions & Compliance Signals",
+        "body": "The Pending Actions section surfaces overdue compliance items, governance gaps, and tax calendar deadlines sorted by severity.",
+        "highlights": [
+          "Critical and high-severity items appear first. Resolve these before low-priority ones.",
+          "Each item links directly to the entity, asset, or compliance page where you can act.",
+          "Items clear automatically once the underlying issue is resolved."
+        ]
+      },
+      {
+        "title": "Portfolio Overview At A Glance",
+        "body": "The portfolio value card, allocation chart, and entity summary give you a snapshot of total exposure and structure.",
+        "highlights": [
+          "Total portfolio value updates as asset valuations and financial events are recorded.",
+          "Allocation breakdown shows concentration risk across asset types.",
+          "Entity cards link to each entity's detail page for deeper analysis."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "assets",
+    "path": "/assets",
+    "title": "Assets",
+    "description": "Manage holdings, ownership, documents, and event history by asset type.",
+    "steps": [
+      {
+        "title": "Use Filters First",
+        "body": "Filter by class and ownership before editing. This keeps list and structure views aligned.",
+        "highlights": [
+          "Apply type filters to reduce noise when portfolios scale.",
+          "Switch between List and Structure for detail vs relationships."
+        ]
+      },
+      {
+        "title": "Governance Is Built Into Asset Data",
+        "body": "Missing purchase dates, ownership, and supporting documents trigger governance insights.",
+        "highlights": [
+          "Purchase date is required for CGT accuracy.",
+          "Document links should be managed from the view experience."
+        ]
+      },
+      {
+        "title": "Asset Types & Classes",
+        "body": "Assets are grouped by class: equities, ETFs, managed funds, property, fixed income, cash, and (when enabled) crypto, commodities, collectibles, and alternative funds.",
+        "highlights": [
+          "Each type has specialist detail fields; property includes address and title type, while equities include ticker and exchange.",
+          "Alternative asset types are gated by the toggle in Settings > General > Asset Classes.",
+          "Filter by type or status to focus on the assets that need attention."
+        ]
+      },
+      {
+        "title": "Recording Entity Expenses",
+        "body": "Use the Add Event dialog to record entity-level expenses like ASIC fees, tax payments, and professional fees. Toggle to \"Entity Expense\" mode to see entity-specific event types.",
+        "highlights": [
+          "Entity expenses are not tied to a specific asset; they belong to the entity itself.",
+          "Select the entity, choose the expense type, and the income year is auto-computed from the date.",
+          "Counterparty autocomplete learns from your previous entries."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "asset-form",
+    "path": "/assets/new",
+    "title": "Asset Creation & Edit",
+    "description": "Capture complete data once so reporting, tax, and compliance remain trustworthy.",
+    "steps": [
+      {
+        "title": "Finish The Critical Fields",
+        "body": "Complete purchase details, ownership splits, and dates before leaving the flow.",
+        "highlights": [
+          "Dates follow workspace format settings.",
+          "Ownership percentages must reconcile cleanly."
+        ]
+      },
+      {
+        "title": "Link Documents In View Mode",
+        "body": "Document linking is intentionally separated from edit to avoid accidental loss on unsaved changes.",
+        "highlights": [
+          "Save asset details, then link docs from the Documents tab.",
+          "AI scan metadata appears once linked."
+        ]
+      },
+      {
+        "title": "Ownership First, Then Funding Source",
+        "body": "Select the legal owner(s) before choosing a funding source. The available credit facilities and cash accounts are filtered to match the selected owners.",
+        "highlights": [
+          "Ownership percentages must be 100% or less. Any remainder can represent external parties.",
+          "Funding source options only show facilities and cash accounts that belong to the selected owner(s).",
+          "Selecting a credit facility auto-populates owners from its borrowers."
+        ]
+      },
+      {
+        "title": "Purchase Lots & CGT Data Quality",
+        "body": "For equities and ETFs, the system creates an estimated parcel from the initial purchase data. Use the Lot Builder on the Parcels tab later to enter exact purchase dates and costs for accurate CGT.",
+        "highlights": [
+          "Estimated parcels use average cost (acceptable for initial setup but not tax-grade).",
+          "Transaction imports from your broker create tax-grade parcels automatically.",
+          "The Lot Builder lets you split a single holding into multiple purchase lots with individual dates."
+        ]
+      },
+      {
+        "title": "Alternative & Specialist Asset Types",
+        "body": "Beyond equities, ETFs, and property, the system supports crypto, commodities, collectibles, and alternative funds. Enable these in Settings > General > Asset Classes.",
+        "highlights": [
+          "Each alternative type has specialist fields (e.g., blockchain and wallet for crypto, storage location for collectibles).",
+          "Collectible CGT losses are quarantined under s108-10, meaning they cannot offset other capital gains.",
+          "Alternative funds use the same infrastructure as managed funds."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "import",
+    "path": "/assets/import",
+    "title": "Import Wizard",
+    "description": "Bulk import holdings, transactions, dividends, or screenshots from your broker and registrars.",
+    "steps": [
+      {
+        "title": "Choose The Right Import Method",
+        "body": "Choose the import method based on your data source. Broker CSVs import holdings and transactions. Registrar reports provide dividend statements with franking. Financial Documents is the most powerful method: it auto-identifies PDFs from any supported broker or registrar and routes them to the correct extraction pipeline.",
+        "highlights": [
+          "Holdings CSV: broker portfolio snapshot with current values (CommSec, SelfWealth, etc.).",
+          "Transactions CSV: broker trade history including buys, sells, dividends, DRPs (CommSec, SelfWealth, etc.).",
+          "Holdings Screenshot: image of your broker portfolio screen (OCR-scanned).",
+          "Dividend Statement: registrar dividend reports with franking details (Computershare, Boardroom, Automic).",
+          "Financial Documents: drop any PDF including trade confirmations, fund statements, dividend advices. Supports CommSec, Bell Potter, Goldman Sachs, Euroz Hartleys, Computershare, MUFG, Vanguard, Boardroom, and more."
+        ]
+      },
+      {
+        "title": "Holdings Import Flow",
+        "body": "After uploading a holdings CSV, select the owning entity, choose a funding source, and review detected holdings before importing.",
+        "highlights": [
+          "Duplicate detection warns if a ticker already exists in your portfolio.",
+          "Funding source filters to facilities and cash accounts owned by the selected entity.",
+          "Imported holdings have estimated cost data — use the Lot Builder on each asset's Parcels tab for accurate CGT."
+        ]
+      },
+      {
+        "title": "Transaction Import & CGT",
+        "body": "Transaction imports match tickers to existing assets and create financial events with tax-grade parcels. Assets must exist first — import holdings before transactions.",
+        "highlights": [
+          "BUY transactions create tax-grade parcels with exact dates and costs.",
+          "SELL transactions create disposals with CGT calculations using your chosen disposal method.",
+          "If an asset has estimated parcels from a previous holdings import, they are automatically replaced by the real transaction data.",
+          "Unmatched tickers are skipped with a clear error — create the holding first."
+        ]
+      },
+      {
+        "title": "Financial Documents (Universal Import)",
+        "body": "The most versatile import method. Drop any financial PDF and the system identifies the document type, registrar or broker, and routes it to the correct extraction pipeline. Supports trade confirmations, dividend advices, fund statements, and periodic reports.",
+        "highlights": [
+          "Step 1: Upload PDFs (or browse SharePoint). Step 2: Review auto-detected document types. Step 3: Confirm and import.",
+          "Trade confirmations are extracted via AI (GPT-4o) with regex fallback: ticker, side, date, quantity, price, brokerage, net amount, and currency.",
+          "Supported brokers: CommSec, Bell Potter, Goldman Sachs, Euroz Hartleys, Argonaut, Haywood. Registrars: Computershare, MUFG, Vanguard, Boardroom, Automic, Coolabah Capital.",
+          "Multi-currency: non-AUD trades (CAD, USD, EUR, etc.) are auto-detected. The currency column shows the detected currency, and assets are created with the correct denomination.",
+          "Missing ticker? Click the amber \"enter ticker\" button so it searches Yahoo Finance using the company name from the PDF."
+        ]
+      },
+      {
+        "title": "Trade Confirmation Import",
+        "body": "Trade confirmations create BUY or SELL events with tax-grade data quality. Each PDF is stored as documentary evidence linked to the event. If a ticker doesn't exist in your portfolio yet, the system creates a provisional asset automatically. Multi-currency trades are supported and the currency is detected from the PDF.",
+        "highlights": [
+          "BUY confirmations create the asset, a BUY event, and a tax-grade parcel in one step.",
+          "SELL confirmations for unknown tickers create a provisional asset, allowing you to add the acquisition history later.",
+          "Multi-currency: CAD, USD, EUR, GBP trades auto-detect the currency. Assets are created with the correct denomination.",
+          "Inline editing: click any cell to correct extraction errors. Ticker search uses Yahoo Finance with the company name pre-filled."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "borrowings",
+    "path": "/assets?tab=borrowings",
+    "title": "Borrowings",
+    "description": "Track external debt — mortgages, lines of credit, and margin loans — as a single source of truth.",
+    "steps": [
+      {
+        "title": "Your External Debt Register",
+        "body": "The Borrowings tab on the Assets page shows all credit facilities across your portfolio with KPI cards for total debt, facility counts, and average interest rate.",
+        "highlights": [
+          "Each facility records the institution, balance, credit limit, interest rate, and linked asset.",
+          "Mortgages link to a property asset; lines of credit and margin loans can fund any eligible asset.",
+          "The offset account balance (if any) reduces the effective debt shown on asset detail pages."
+        ]
+      },
+      {
+        "title": "Multi-Entity Borrowers",
+        "body": "A single facility can have multiple borrowers, for example a person and their trust co-borrowing on the same mortgage. The system tracks each borrower relationship separately.",
+        "highlights": [
+          "When creating a facility, select all co-borrowers using the entity checkboxes.",
+          "Facility borrowers auto-populate as owners when linking the facility to an asset's funding source.",
+          "Compliance rules can flag mismatches between asset owners and facility borrowers."
+        ]
+      },
+      {
+        "title": "Facility Types & Interest Tracking",
+        "body": "Three facility types cover all common external debt structures. Interest rates are stored as decimals and displayed as percentages.",
+        "highlights": [
+          "Mortgage: secured against a property, linked via the property form or asset funding source.",
+          "Line of Credit: flexible borrowing against any asset type, supports offset accounts.",
+          "Margin Loan: secured against listed securities (equities and ETFs only).",
+          "Interest paid events can be recorded against the linked asset for tax deduction tracking."
+        ]
+      },
+      {
+        "title": "Facility Detail & Security Constraints",
+        "body": "Each facility's detail page shows a Security & Constraints card when a secured asset and Max LVR are set. This shows the LVR progress bar, max borrowing capacity in dollars, and committed vs headroom breakdown.",
+        "highlights": [
+          "For Lines of Credit, committed amount uses the credit limit (not drawn balance) because lenders count the full facility.",
+          "The LVR progress bar colour-codes green/amber/red based on how close you are to the Max LVR ceiling.",
+          "A link to the Borrowing Capacity dashboard lets you see the portfolio-wide impact."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "borrowingCapacity",
+    "path": "/borrowings/capacity",
+    "title": "Borrowing Capacity",
+    "description": "Understand your household borrowing ceiling, equity headroom, and what you can acquire next.",
+    "steps": [
+      {
+        "title": "How Borrowing Capacity Works",
+        "body": "Investment properties funded by your primary residence's equity are constrained by the anchor property's Max LVR, not just individual facility limits. This page shows your portfolio-wide borrowing ceiling.",
+        "highlights": [
+          "The anchor property is your owner-occupied residence with the highest-value secured facility.",
+          "Remaining headroom = (property value × Max LVR) minus total committed facilities.",
+          "Headroom splits into \"Available to Draw\" (undrawn LOC) and \"Additional Capacity\" (needs bank approval)."
+        ]
+      },
+      {
+        "title": "Equity Position Card",
+        "body": "The Equity Position card shows your anchor property, LVR progress bar, headroom split, and all facilities in one place as the single source of truth for your debt constraint.",
+        "highlights": [
+          "The LVR bar shows current vs max LVR with green/amber/red colour coding.",
+          "Facility rows are inline — click any facility to open its detail page.",
+          "For LOCs, committed amount is the credit limit, not drawn balance."
+        ]
+      },
+      {
+        "title": "Acquisition Scenarios & Custom Builder",
+        "body": "The \"What Can You Buy?\" card shows pre-computed scenarios (100% LVR, 90% with deposit, pay-down-then-buy) plus a custom builder where you enter any property value and deposit percentage.",
+        "highlights": [
+          "Green tick = feasible within your anchor's max LVR. Amber warning = exceeds current LOC limit but within max LVR.",
+          "The custom builder calculates resulting anchor LVR, household LVR, and feasibility instantly without a server round-trip.",
+          "All scenarios show the resulting household LVR so you can compare portfolio-wide risk."
+        ]
+      },
+      {
+        "title": "Interest Rate Stress Test",
+        "body": "The stress test models +1%, +2%, and +3% rate increases across all facilities. It shows the dollar impact on monthly and annual interest costs with a per-facility breakdown table.",
+        "highlights": [
+          "Current baseline costs are shown first so you can see where you stand today.",
+          "Each stress card shows the total monthly cost, monthly increase, and annual increase.",
+          "The per-facility table breaks down exactly which facilities drive the most rate sensitivity."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "people",
+    "path": "/assets?tab=people",
+    "title": "People",
+    "description": "Manage individuals — the people behind your trusts, companies, and investment structures.",
+    "steps": [
+      {
+        "title": "Keep Personal Details Current",
+        "body": "TFN, date of birth, and contact details feed directly into tax reporting, SMSF compliance, and governance checks.",
+        "highlights": [
+          "TFN is required for accurate tax pack generation and ATO item mapping.",
+          "Date of birth drives SMSF pension minimum rates and contribution cap thresholds."
+        ]
+      },
+      {
+        "title": "People Connect to Structures",
+        "body": "Each person can hold governance roles across multiple entities: director of a company, trustee of a trust, beneficiary of a family trust. These links determine edit permissions and meeting quorum.",
+        "highlights": [
+          "Governance roles (director, trustee, secretary) grant edit access to the linked entity.",
+          "Passive roles (beneficiary, shareholder, settlor) provide visibility without edit authority.",
+          "Corporate trustee chains are followed: directing the trustee company gives authority over the trust."
+        ]
+      },
+      {
+        "title": "Build The Network",
+        "body": "Add all individuals involved in your structure: beneficiaries, directors, trustees, and appointors. The more complete the people register, the better the compliance and governance insights.",
+        "highlights": [
+          "Missing governance links trigger compliance items in the queue.",
+          "Use structure view to visualise person-to-entity relationships."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "entities",
+    "path": "/assets?tab=entities",
+    "title": "Entities",
+    "description": "Maintain legal/tax data quality across trusts and companies.",
+    "steps": [
+      {
+        "title": "Treat Entity Data As Compliance Infrastructure",
+        "body": "ABN/ACN and key role assignments directly drive governance outcomes.",
+        "highlights": [
+          "Keep trustees, directors, and officers current.",
+          "Use structure view to validate control and ownership relationships."
+        ]
+      },
+      {
+        "title": "Edit Access Follows Governance Authority",
+        "body": "Your ability to edit an entity depends on your governance relationship to it. Directors can edit their companies, trustees can edit their trusts, and these permissions flow through corporate structures.",
+        "highlights": [
+          "Owners and Admins can always edit everything.",
+          "Editors and Advisors can only edit entities they govern (director, trustee, secretary, appointor).",
+          "Corporate trustee chains are followed: if you direct the corporate trustee, you can edit the trust.",
+          "Passive roles (beneficiary, shareholder, settlor) do not grant edit access."
+        ]
+      },
+      {
+        "title": "Entity Documents Anchor Governance",
+        "body": "Trust deeds, constitutions, and strategy documents should be linked and classified.",
+        "highlights": [
+          "Mismatches between metadata and documents should be surfaced.",
+          "Use entity documents tab for linking and review."
+        ]
+      },
+      {
+        "title": "Distribution Recording",
+        "body": "Record trust distributions as paired events. When you select \"Trust Distribution\" as the event type on a trust entity, the system creates both the outflow (distribution) and inflow (income) events automatically.",
+        "highlights": [
+          "Select the receiving entity (individual, company, or another trust) and the system links both events.",
+          "Franking credits and percentages carry through to the income event.",
+          "Counterparties are auto-set from entity names for easy identification."
+        ]
+      },
+      {
+        "title": "Build The Network, Not Just Records",
+        "body": "The value of the platform increases as relationship data becomes complete.",
+        "highlights": [
+          "Beneficiary and shareholder links unlock better insights.",
+          "Keep records current before running reports."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "entity-form",
+    "path": "/entities/new",
+    "title": "Entity Setup & Edit",
+    "description": "Create or edit people, companies, and trusts with guided step-by-step forms.",
+    "steps": [
+      {
+        "title": "Step-By-Step Wizard",
+        "body": "Entity creation uses a multi-step wizard. Choose the entity type first, then the form adapts: persons get a details step, companies add governance, and trusts add both structure and governance steps.",
+        "highlights": [
+          "Use Back and Next to move between steps — your data is preserved across steps.",
+          "Missing fields will appear in the Compliance queue so nothing gets missed.",
+          "Edit mode uses the same steps without the type selector."
+        ]
+      },
+      {
+        "title": "Get Tax Identifiers Right",
+        "body": "ABN, ACN, and TFN feed directly into tax reporting and compliance checks. Errors here create downstream churn.",
+        "highlights": [
+          "Verify identifiers against source documents (ASIC extract, ATO notice).",
+          "Complete trustee, director, and officer roles during setup — they drive edit permissions."
+        ]
+      },
+      {
+        "title": "Trust Beneficiaries — Three Tiers",
+        "body": "Trust deeds define three tiers of beneficiary. The Structure step guides you through each: primary beneficiaries (normal distribution recipients), default beneficiary (safety net), and the general beneficiary class (everyone eligible).",
+        "highlights": [
+          "Primary beneficiaries are the people who normally receive distributions each year.",
+          "The default beneficiary receives income if the trustee doesn't make a distribution resolution.",
+          "The general class includes all entities (individuals, companies, trusts) eligible for distributions.",
+          "Corporate beneficiaries (bucket companies) are highlighted for tax optimization."
+        ]
+      },
+      {
+        "title": "Governance Roles = Edit Access",
+        "body": "Assigning a director, trustee, or secretary also grants edit access to this entity for any workspace member linked to that person.",
+        "highlights": [
+          "Directors can edit their company. Trustees can edit their trust.",
+          "Corporate trustee chains are followed — directing the corporate trustee grants trust access.",
+          "Passive roles (beneficiary, shareholder, settlor) do not grant edit access."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "smsfCompliance",
+    "path": "/assets?tab=entities",
+    "title": "SMSF Compliance",
+    "description": "Manage SMSF members, contributions, pension payments, minimum pension monitoring, ECPI, and annual member statements.",
+    "steps": [
+      {
+        "title": "Member Register",
+        "body": "Add members to your SMSF by linking Person entities. Set roles (Trustee, Contributing Member, Employer) and pension status. Max 6 members per fund.",
+        "highlights": [
+          "Members must be existing Person entities in your workspace.",
+          "Soft-delete preserves audit trail — removed members keep their balance history.",
+          "Pension members track a start date and separate pension opening balance for drawdown calculations."
+        ]
+      },
+      {
+        "title": "Opening Balances",
+        "body": "Enter each member's total opening balance and pension opening balance for the financial year. Pension balances are only editable for pension-phase members.",
+        "highlights": [
+          "Opening balances come from your accountant's prior-year member statements.",
+          "The total of all opening balances should match your fund's total balance at 1 July.",
+          "Pension opening balance drives minimum pension calculations and ECPI."
+        ]
+      },
+      {
+        "title": "Contribution Register",
+        "body": "Record individual member contributions by type (concessional, non-concessional, spouse, downsizer, government co-contribution). ATO cap monitoring shows usage against annual limits.",
+        "highlights": [
+          "Contributions are tracked per-member per-FY with ATO type classification.",
+          "Cap monitor shows concessional and non-concessional usage with visual progress bars.",
+          "Governance alerts fire when caps are exceeded or approaching 80%."
+        ]
+      },
+      {
+        "title": "Commencing a Pension",
+        "body": "When a member enters pension phase, use the \"Commence Pension\" action on their member row to formally record the commencement. Choose between Account-Based Pension (ABP) and Transition to Retirement (TTR) — each has different tax and drawdown rules.",
+        "highlights": [
+          "Account-Based Pension (ABP): Most common. No drawdown cap above ATO minimum. Full tax exemption on pension assets.",
+          "Transition to Retirement (TTR): For members still working. Annual drawdown capped at 10% of opening balance. Non-commutable.",
+          "Setting the pension start date and opening balance here flows into minimum pension calculations and ECPI automatically."
+        ]
+      },
+      {
+        "title": "Pension Payment Register",
+        "body": "Record pension payments made to pension-phase members. Payments are tracked per-member per-FY and feed into minimum pension compliance monitoring.",
+        "highlights": [
+          "Pension payments can optionally link to a FinancialEvent for GL write-through.",
+          "Only pension-phase members appear in the payment register.",
+          "Total payments are compared against ATO minimum drawdown requirements."
+        ]
+      },
+      {
+        "title": "Minimum Pension Monitor",
+        "body": "Tracks each pension member's drawdown against ATO minimum requirements. Age-based rates (4%–14%) are applied to the pension opening balance to calculate the minimum for the year.",
+        "highlights": [
+          "Status shows MET (green), SHORTFALL (red), or NO_DOB (amber warning).",
+          "Age is calculated as at 1 July of the FY using the Person entity's date of birth.",
+          "Workspace-level rate overrides are available in Settings but should only be changed with advisor guidance."
+        ]
+      },
+      {
+        "title": "ECPI — Exempt Current Pension Income",
+        "body": "Calculates the proportion of fund income that is tax-exempt using the proportionate method: pension balances ÷ total fund balances. That percentage of the fund's investment income is exempt from tax.",
+        "highlights": [
+          "Uses opening balances at 1 July for the proportionate calculation.",
+          "Shows total income, exempt income, and taxable income breakdown.",
+          "ECPI reduces the fund's tax liability proportional to pension liabilities."
+        ]
+      },
+      {
+        "title": "Member Statements (Phase-Split)",
+        "body": "View annual member statements showing: Opening → + Contributions → + Income → - Expenses → - Distributions → Closing. Members in pension phase see separate accumulation and pension sub-statements. Toggle between combined and split views.",
+        "highlights": [
+          "Phase-split view shows separate accumulation and pension balances for pension members.",
+          "Combined view shows the aggregate position across both phases.",
+          "Income and expenses from your transaction journal are automatically allocated proportionally.",
+          "The reconciliation badge confirms total fund balance equals sum of member closings."
+        ]
+      },
+      {
+        "title": "Export Statements",
+        "body": "Export all member statements as CSV for your accountant or auditor. Phase-split includes separate accumulation and pension rows per member.",
+        "highlights": [
+          "CSV includes all columns: opening, contributions, income, expenses, distributions, closing, allocation %.",
+          "Pension members with separate rows for accumulation and pension phases.",
+          "The totals row reconciles against fund-level balances."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "risk-protection-dashboard",
+    "path": "/risk-protection",
+    "title": "Risk & Protection Dashboard",
+    "description": "Traffic-light overview of fiduciary risk across dependants, death benefit nominations, estate plans, insurance coverage, and key person exposure.",
+    "steps": [
+      {
+        "title": "Five Risk Domains",
+        "body": "Each card shows a traffic-light status (green/amber/red) for one risk domain. Red means immediate action is needed — expired BDBNs, missing wills, or uninsured key persons.",
+        "highlights": [
+          "Dependants: Are all dependants recorded with current details?",
+          "Death Benefits: Are BDBN nominations current and not expired?",
+          "Estate Plans: Does every person have a valid will and powers of attorney?",
+          "Insurance: Is there adequate coverage across life, TPD, income protection?",
+          "Key Person Risk: Are critical roles concentrated in too few people?"
+        ]
+      },
+      {
+        "title": "Taking Action",
+        "body": "Click any card to drill into that register. Each register lets you add, edit, and track records with full audit history.",
+        "highlights": [
+          "Amber items are approaching risk — BDBNs expiring within 90 days, policies up for renewal.",
+          "Red items need immediate attention — expired nominations, missing coverage.",
+          "Use the entity Risk tab to see all risk factors for a specific person."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "risk-protection-dependants",
+    "path": "/risk-protection/dependants",
+    "title": "Dependant Register",
+    "description": "Track dependants for each person entity — children, spouses, elderly parents. Critical for BDBN nominations, insurance needs analysis, and estate planning.",
+    "steps": [
+      {
+        "title": "Why Track Dependants?",
+        "body": "Dependant data feeds three downstream risk processes: death benefit nomination validity, insurance needs analysis, and estate planning completeness.",
+        "highlights": [
+          "Each dependant is linked to a person entity (the parent/guardian).",
+          "Dependency status (child, spouse, financial dependant) determines BDBN eligibility.",
+          "Age-based alerts surface when children reach adulthood and dependency status may change."
+        ]
+      },
+      {
+        "title": "Managing Dependants",
+        "body": "Add dependants with their relationship, date of birth, and dependency status. The system tracks changes over time for audit purposes.",
+        "highlights": [
+          "Use the entity picker to link dependants to the correct person.",
+          "Gender and notes fields are optional but useful for estate planning context."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "risk-protection-death-benefits",
+    "path": "/risk-protection/death-benefits",
+    "title": "Death Benefit Nominations (BDBN)",
+    "description": "Track binding and non-binding death benefit nominations for SMSF members. Monitor expiry dates and nomination status with automatic alerts.",
+    "steps": [
+      {
+        "title": "Why BDBNs Matter",
+        "body": "A Binding Death Benefit Nomination (BDBN) directs the SMSF trustee on how to distribute a member's super balance on death. Without a valid BDBN, the trustee has discretion — which may not align with the member's wishes.",
+        "highlights": [
+          "Binding nominations expire after 3 years under SIS Regulations and must be renewed.",
+          "Non-binding nominations are advisory only — the trustee retains discretion.",
+          "Reversionary pensions bypass BDBNs for pension assets (auto-detected)."
+        ]
+      },
+      {
+        "title": "Status Tracking",
+        "body": "The system automatically monitors BDBN expiry dates and updates status: Current, Expiring Soon (within 90 days), or Expired.",
+        "highlights": [
+          "Expired BDBNs show as red alerts on the Risk Dashboard.",
+          "Expiring Soon nominations show as amber warnings.",
+          "Each nomination records the beneficiary name, allocation percentage, and relationship."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "risk-protection-estate-planning",
+    "path": "/risk-protection/estate-planning",
+    "title": "Estate Planning Register",
+    "description": "Track wills, powers of attorney, and estate planning documents for each person. Surface gaps where critical documents are missing or expired.",
+    "steps": [
+      {
+        "title": "Estate Planning Coverage",
+        "body": "For each person entity, track whether they have a current will, enduring power of attorney (financial), medical power of attorney, and advance care directive.",
+        "highlights": [
+          "Missing documents show as gaps on the Risk Dashboard.",
+          "Document dates help identify stale estate plans that may need review.",
+          "Link to uploaded documents in the DMS for evidence."
+        ]
+      },
+      {
+        "title": "Powers of Attorney",
+        "body": "Track EPA (Enduring Power of Attorney) and medical PoA separately. Each state has different requirements — the system records jurisdiction and document details.",
+        "highlights": [
+          "For a professional trustee/EPA, tracking PoA status across all clients is critical.",
+          "Expiry or revocation triggers a red alert on the dashboard."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "risk-protection-insurance",
+    "path": "/risk-protection/insurance",
+    "title": "Insurance Register",
+    "description": "Track life, TPD, income protection, and trauma insurance policies. Run gap analysis to identify under-insurance across the household.",
+    "steps": [
+      {
+        "title": "Insurance Coverage",
+        "body": "Record all insurance policies with their type, insurer, sum insured, premium, and renewal date. The system aggregates coverage by type to identify gaps.",
+        "highlights": [
+          "Supports Life, TPD, Income Protection, Trauma, and general insurance types.",
+          "Policies can be linked to entities (personal or held within super).",
+          "Renewal date tracking surfaces upcoming renewals as amber alerts."
+        ]
+      },
+      {
+        "title": "Gap Analysis",
+        "body": "The gap analysis engine compares actual coverage against recommended levels based on dependants, income, and liabilities. It highlights under-insurance and over-insurance.",
+        "highlights": [
+          "Gap analysis uses dependant data and employment income for needs-based calculations.",
+          "Results feed into the Risk Dashboard traffic-light for insurance."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "risk-protection-key-person",
+    "path": "/risk-protection/key-person-risk",
+    "title": "Key Person Risk",
+    "description": "Analyse concentration of critical roles across entities. Identify where a single person holds multiple directorships, trusteeships, or signatory authorities.",
+    "steps": [
+      {
+        "title": "Key Person Concentration",
+        "body": "This view analyses role assignments across all entities to identify people who are single points of failure. If one person is the sole director, trustee, and signatory for multiple structures, that's a risk.",
+        "highlights": [
+          "Role count and entity count are scored to generate a risk level.",
+          "High-concentration individuals are flagged with recommended actions (appoint alternate directors, add co-trustees).",
+          "This is a read-only analysis view — it queries existing entity and role data."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "compliance-queue-tab",
+    "path": "/compliance",
+    "title": "My Queue Tab",
+    "description": "Your daily work queue for compliance obligations and operational tasks.",
+    "steps": [
+      {
+        "title": "Unified Work Queue",
+        "body": "All compliance items and work items appear here, sorted by priority and due date. This is your daily dashboard for outstanding actions.",
+        "highlights": [
+          "Items are auto-triggered by governance rules or manually created.",
+          "Each item shows status, SLA, and who it's assigned to.",
+          "Click any item to open its detail view and take action."
+        ]
+      },
+      {
+        "title": "Filter & Search",
+        "body": "Use filters to focus on what matters: domain (tax, governance, audit), authority (ATO, ASIC), overdue status, and evidence needs.",
+        "highlights": [
+          "Saved views let you store your favorite filter combinations.",
+          "Bulk actions let you assign, reassign, or close multiple items at once."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "compliance-calendar-tab",
+    "path": "/compliance?tab=calendar",
+    "title": "Regulatory Calendar Tab",
+    "description": "Authority-driven compliance deadlines and key dates for ATO, ASIC, and other regulators.",
+    "steps": [
+      {
+        "title": "Regulatory Calendar",
+        "body": "View all ATO, ASIC, and other regulatory deadlines in calendar format. Never miss a lodgement date or compliance deadline.",
+        "highlights": [
+          "Events are color-coded by authority (ATO green, ASIC blue, APRA purple).",
+          "Click any event to see details and create a work item if action is needed.",
+          "Use authority filters to focus on specific regulators."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "compliance-library-tab",
+    "path": "/compliance?tab=library",
+    "title": "Compliance Library Tab",
+    "description": "Central repository for evidence, documents, governance register, and loan tracking.",
+    "steps": [
+      {
+        "title": "Library Sections",
+        "body": "The library organizes your compliance evidence into three sections: Documents, Governance Register, and Loans.",
+        "highlights": [
+          "Documents: Trust deeds, constitutions, board minutes, and supporting evidence.",
+          "Governance Register: All governance documents with source, status, and signing progress.",
+          "Loans: External debt facilities and inter-entity loans with Div 7A tracking."
+        ]
+      },
+      {
+        "title": "Governance Register",
+        "body": "The Governance Register shows a unified, read-only view of every governance document created in the workspace — from formal meeting minutes to circular resolutions. Filter by entity, type, source, or status.",
+        "highlights": [
+          "Source column shows whether a document came from a meeting, circular resolution, or standalone creation.",
+          "Signing progress tracks how many required signatures are complete.",
+          "Click any row to view the full document with signatures and evidence certificate.",
+          "Export filtered results as CSV for auditor packs."
+        ]
+      },
+      {
+        "title": "Attach Evidence to Work Items",
+        "body": "Link documents and resolutions to work items to create an audit trail and demonstrate compliance.",
+        "highlights": [
+          "Evidence attachments are required before marking items as complete.",
+          "Search and filter by type, date, and entity."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "compliance-audit-tab",
+    "path": "/compliance?tab=audit",
+    "title": "Compliance Audit Tab",
+    "description": "Tamper-evident audit trail with hash verification and Australian regulatory retention tracking.",
+    "steps": [
+      {
+        "title": "Retention Summary",
+        "body": "The compact retention bar shows audit entry counts per regulatory authority (ATO, ASIC, APRA) with their mandatory retention dates under Australian law.",
+        "highlights": [
+          "ATO: 7 years (s 262A ITAA 1936). ASIC: 7 years (s 286 Corporations Act). APRA: 10 years (SIS Act).",
+          "Retention dates are calculated automatically when entries are recorded."
+        ]
+      },
+      {
+        "title": "Audit Trail",
+        "body": "A searchable, hash-verified log of every compliance action: item creation, status changes, assignments, governance decisions, and evidence attachments.",
+        "highlights": [
+          "Filter by authority, category, action, actor, or date range.",
+          "Each entry has a SHA-256 content hash — click the shield icon to verify tamper evidence.",
+          "Export filtered results to CSV for external audit packages."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "workflows",
+    "path": "/workflows",
+    "title": "Workflow Boards",
+    "description": "Kanban-style boards for operational workflow execution and process control.",
+    "steps": [
+      {
+        "title": "Use Kanban Boards For Visual Process Control",
+        "body": "Each workflow definition gets its own board with state columns. Drag items between states to advance them through the process.",
+        "highlights": [
+          "Select a board from the definition pills to switch between workflows.",
+          "Each column represents a workflow state — items move left to right.",
+          "Owner-only transitions protect critical state changes from accidental advances."
+        ]
+      },
+      {
+        "title": "Understand Auto-Triggers And Work Items",
+        "body": "Governance insights can automatically create workflow items. When a compliance check detects a triggerable condition, it spawns a work item on the matching board.",
+        "highlights": [
+          "Auto-trigger patterns match governance insight IDs to workflow definitions.",
+          "Triggered items appear in both the Compliance queue and the relevant workflow board.",
+          "Enable or disable individual triggers per workspace from Settings > Integrations & Automation."
+        ]
+      },
+      {
+        "title": "Track SLA Breaches And Resolution Times",
+        "body": "The Admin page shows workflow telemetry: mean time to resolution, SLA breach counts, and open item totals per definition.",
+        "highlights": [
+          "Items that exceed their SLA threshold are flagged for escalation.",
+          "Use MTTR trends to identify process bottlenecks across definitions.",
+          "Review the Admin > Workflows panel for workspace-wide operational health."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "meetings",
+    "path": "/meetings",
+    "title": "Meetings & Governance Signing",
+    "description": "Schedule meetings, record resolutions, sign documents with SHA-256 hash chains, and verify governance evidence.",
+    "steps": [
+      {
+        "title": "Meeting-Centric Governance",
+        "body": "Meetings are the governance anchor for trusts and companies. Use this hub to schedule meetings, draft agendas, record resolutions, and generate minutes.",
+        "highlights": [
+          "Each meeting links to the entity it governs — trustee meetings for trusts, director meetings for companies.",
+          "Resolutions recorded here flow into the compliance audit trail.",
+          "Minutes can be generated as governance documents for filing."
+        ]
+      },
+      {
+        "title": "Creating a Meeting or Circular Resolution",
+        "body": "Create a formal meeting or use a circular resolution for single-issue decisions between meetings. Circular resolutions require s248A unanimity.",
+        "highlights": [
+          "Formal meetings: full agenda, attendance, quorum checks, and live data panels.",
+          "Circular resolutions: streamlined path for routine decisions (distributions, fee approvals).",
+          "Agenda items can reference compliance work items that need resolution.",
+          "Meeting minutes are auto-drafted from agenda items and recorded decisions."
+        ]
+      },
+      {
+        "title": "Digital Signing & Hash Chain",
+        "body": "Each governance document can be signed digitally. Signatures are recorded with SHA-256 hash chains for tamper-evident audit trails. Per-attendee signing supports \"Sign Now\" (in-browser) or \"Send to Phone\" (companion app with WebAuthn).",
+        "highlights": [
+          "Hash chain: each signature links to the previous, creating a verifiable chain of custody.",
+          "Companion app: trustees sign on their phone via WebAuthn biometric authentication.",
+          "Push notifications alert signatories when a document needs their signature.",
+          "Signing progress is tracked per-attendee with status badges."
+        ]
+      },
+      {
+        "title": "Public Verification & Evidence Certificates",
+        "body": "Signed governance documents generate evidence certificates and public verification URLs. Auditors and third parties can verify document integrity without platform access.",
+        "highlights": [
+          "QR codes on signed documents link to the public verification page.",
+          "The verification page validates the full SHA-256 hash chain integrity.",
+          "Evidence certificates bundle the signed document, signature metadata, and chain proof.",
+          "Auditor pack ZIP contains all evidence for a governance document in one download."
+        ]
+      },
+      {
+        "title": "Due Diligence on the Agenda",
+        "body": "After running a due diligence analysis on a proposed acquisition, add it to the meeting agenda for formal trustee discussion. Use the Investment Due Diligence Approval resolution template.",
+        "highlights": [
+          "Due Diligence items appear with a teal badge on the meeting agenda.",
+          "Use the \"Investment Due Diligence Approval\" resolution template to formally record the trustee decision.",
+          "Once approved, proceed to asset creation with pre-filled details from the wizard."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "governance-verification",
+    "path": "/compliance?tab=library",
+    "title": "Document Verification",
+    "description": "Verify the integrity of signed governance documents using SHA-256 hash chain validation.",
+    "steps": [
+      {
+        "title": "Hash Chain Verification",
+        "body": "Each signed governance document has a public verification page accessible via QR code or direct URL. The verifier checks every link in the SHA-256 hash chain to confirm no signatures have been tampered with.",
+        "highlights": [
+          "No account or login required — anyone with the verification link can check integrity.",
+          "The page shows each signature in the chain with signer identity, timestamp, and hash.",
+          "A green \"Verified\" badge confirms the chain is intact; a red \"Tampered\" badge means a break was detected."
+        ]
+      },
+      {
+        "title": "Evidence Certificates & Auditor Pack",
+        "body": "Signed documents generate an evidence certificate summarising the signing event: who signed, when, how (browser or companion WebAuthn), and the hash chain proof.",
+        "highlights": [
+          "Evidence certificates are standalone PDF documents suitable for audit files.",
+          "The auditor pack ZIP bundles: signed document + evidence certificate + chain metadata.",
+          "Download the auditor pack from the Governance Register or the meeting detail page."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "distributions",
+    "path": "/distributions",
+    "title": "Distribution Decision Engine",
+    "description": "Plan, approve, and post trust and SMSF distributions with tax-optimised allocations, governance workflows, and GL posting.",
+    "steps": [
+      {
+        "title": "Decision Board Overview",
+        "body": "The Distribution Decision Engine uses a Kanban board to track distribution decisions through their lifecycle: Draft → Ready for Approval → Approved → Finalized → Posted. Each card represents one trust or SMSF distribution resolution for a financial year.",
+        "highlights": [
+          "Filter the board by entity, financial year, or decision type.",
+          "Drag cards between columns or use action buttons to transition status.",
+          "Decision types include Trust Distribution, SMSF Distribution, Investment Decision, and Trustee Resolution."
+        ]
+      },
+      {
+        "title": "Creating a Decision",
+        "body": "Click \"New Decision\" to create a draft. Select the distributing entity, financial year, decision type, and title. The system snapshots the trust income pool so you can see distributable amounts by income category (ordinary, capital gains, franked dividends, tax-exempt).",
+        "highlights": [
+          "Income pool snapshot shows accumulated income available for distribution.",
+          "New decisions start with a \"Provisional\" income pool — ETF and managed fund distributions are estimated until fund managers publish final FY data (typically mid-July).",
+          "Rationale field documents the trustee reasoning for audit trail.",
+          "Draft decisions can be edited freely before submission."
+        ]
+      },
+      {
+        "title": "Setting Beneficiary Allocations",
+        "body": "Open a draft decision and use the Allocation Editor to assign income streams to each beneficiary. Allocate ordinary income, discount capital gains, non-discount capital gains, franked dividends, franking credits, and tax-exempt income separately for tax-optimal streaming.",
+        "highlights": [
+          "Each income stream can be directed to different beneficiaries for tax efficiency.",
+          "The tax engine calculates estimated tax obligations per beneficiary in real-time.",
+          "Total allocations must equal the distributable pool — the editor shows remaining unallocated amounts.",
+          "Beneficiaries are grouped: primary beneficiaries, bucket companies, and general beneficiaries.",
+          "Expanding a beneficiary row shows their external income, other trust allocations, and estimated marginal tax rate."
+        ]
+      },
+      {
+        "title": "Unit Register (Unit & Hybrid Trusts)",
+        "body": "Unit and hybrid trusts distribute income proportionally based on unit holdings, not trustee discretion. The Unit Register panel appears automatically on the Distributions tab for these trust types, showing current holdings and event history.",
+        "highlights": [
+          "Create a unit register to start tracking holdings — this is the legal record of who holds how many units.",
+          "Record events: Initial Issue, Additional Issue, Redemption, or Transfer between holders.",
+          "The system calculates each holder entitlement percentage automatically from the register.",
+          "Hybrid trusts split distributions into a unit baseline portion (pro-rata) and a discretionary overlay.",
+          "When creating a distribution decision, use \"Calculate Entitlements\" to auto-populate allocations from the register."
+        ]
+      },
+      {
+        "title": "Provisional vs Confirmed Income Pool",
+        "body": "New decisions start with a provisional income pool. This is normal — ETF and managed fund managers do not publish final distribution components (franking credits, CGT breakdowns) until after the financial year ends, typically mid-July. The trustee resolution can proceed with provisional figures since it must be dated on or before June 30.",
+        "highlights": [
+          "The amber \"Provisional\" badge and banner indicate the income pool is based on estimated figures.",
+          "\"Refresh Pool\" re-snapshots income from the ledger — use this after importing updated fund distribution statements.",
+          "If amounts change after a refresh, the system shows the delta so you can adjust allocations.",
+          "\"Confirm Final\" marks the pool as confirmed once all fund distributions are received.",
+          "The decision can progress through Draft → Approved → Finalized while provisional — only Post to GL requires confirmation."
+        ]
+      },
+      {
+        "title": "Approval Workflow",
+        "body": "Submit a decision for approval when allocations are ready. Approvers review the tax impact and can approve, reject (with reason), block, or escalate. Approved decisions can then be finalised, which locks the allocations. The trustee resolution must be signed before June 30, even if figures are still provisional.",
+        "highlights": [
+          "Rejected decisions return to Draft with the rejection reason attached.",
+          "Blocked decisions are for genuine exceptions (errors, disputes, compliance holds) — not for the normal \"waiting for fund data\" scenario.",
+          "Escalated decisions flag for senior review with an escalation reason.",
+          "The full audit trail tracks every status transition with timestamps and actors."
+        ]
+      },
+      {
+        "title": "GL Posting",
+        "body": "Finalised decisions can be posted to the general ledger once the income pool is confirmed. Posting creates paired financial events: distribution outflows on the trust and income inflows on each beneficiary entity. Posted decisions are locked and can only be changed via amendment.",
+        "highlights": [
+          "Post to GL is disabled while the income pool is provisional — confirm the pool first.",
+          "Posting creates TRUST_DISTRIBUTION events with correct income classifications.",
+          "Franking credits flow through to beneficiary entities automatically.",
+          "Posted decisions appear on entity P&L, tax packs, and MTAS labels.",
+          "Amendments create a new decision linked to the original for audit continuity."
+        ]
+      },
+      {
+        "title": "Amendments & Audit Trail",
+        "body": "After posting, the decision is immutable. To correct an error or update figures after receiving final fund data, create an amendment — a new decision linked to the original with full audit continuity.",
+        "highlights": [
+          "Amendments reference the original decision for auditor traceability.",
+          "The state machine tracks every transition (DRAFT → APPROVED → FINALIZED → POSTED) with timestamps and actors.",
+          "The full decision history is visible in the entity Distributions tab and the Governance Register."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "reports-overview-tab",
+    "path": "/reports/overview",
+    "title": "Overview Tab",
+    "description": "Portfolio allocation, performance, and key financial metrics at a glance.",
+    "steps": [
+      {
+        "title": "Portfolio KPIs",
+        "body": "The Overview tab summarizes your total portfolio value, allocation by asset type, and performance metrics.",
+        "highlights": [
+          "Total portfolio value across all entities and assets.",
+          "Asset allocation pie chart shows concentration by type (equities, fixed income, property, etc.).",
+          "Filter by entity or financial year to focus on specific portfolios or periods."
+        ]
+      },
+      {
+        "title": "Drill Into Details",
+        "body": "Click any asset type or entity card to drill down into detailed holdings and performance.",
+        "highlights": [
+          "Top performers and underperformers are highlighted.",
+          "Entity cards show each entity's net worth and asset breakdown."
+        ]
+      },
+      {
+        "title": "Ask AI — Workspace-Aware",
+        "body": "The Ask AI button (bottom-right) opens a chat assistant that knows both the current tab data AND your full portfolio — every entity, asset, holding, and value across the workspace.",
+        "highlights": [
+          "Ask tab-specific questions: \"why is this number negative?\" or \"what drove the return change?\"",
+          "Ask workspace-wide questions: \"what CFD assets do we have?\", \"which entity owns the most property?\", or \"list all equities with their current values.\"",
+          "The AI loads your workspace context on first use — no extra setup required.",
+          "Conversation history is maintained within the session."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "reports-cashflow-tab",
+    "path": "/reports/cashflow",
+    "title": "Cashflow Tab",
+    "description": "Income and expense flows across your portfolio over time.",
+    "steps": [
+      {
+        "title": "Cashflow Analysis",
+        "body": "View income and expense flows by month, quarter, or year. Identify trends, seasonal patterns, and cash needs.",
+        "highlights": [
+          "Income sources: dividends, interest, rent, capital gains.",
+          "Expense categories: interest, fees, taxes, distributions.",
+          "Cumulative cashflow shows net position over time."
+        ]
+      },
+      {
+        "title": "Ask AI — Workspace-Aware",
+        "body": "The Ask AI button (bottom-right) opens a chat assistant that knows both the current tab data AND your full portfolio — every entity, asset, holding, and value across the workspace.",
+        "highlights": [
+          "Ask tab-specific questions: \"why is this number negative?\" or \"what drove the return change?\"",
+          "Ask workspace-wide questions: \"what CFD assets do we have?\", \"which entity owns the most property?\", or \"list all equities with their current values.\"",
+          "The AI loads your workspace context on first use — no extra setup required.",
+          "Conversation history is maintained within the session."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "reports-capital-gains-tab",
+    "path": "/reports/tax/cgt",
+    "title": "Capital Gains Tab",
+    "description": "Capital gains tax (CGT) analysis, disposal methods, and tax lot tracking.",
+    "steps": [
+      {
+        "title": "Capital Gains & Tax Lots",
+        "body": "Track purchase lots, holding periods, and CGT liability for each asset. View which assets are eligible for the 50% CGT discount.",
+        "highlights": [
+          "Disposal method (FIFO, LIFO, specific ID) affects tax outcome.",
+          "Assets held > 12 months qualify for 50% CGT discount (individuals/trusts).",
+          "Unrealised gains show potential liability if sold today."
+        ]
+      },
+      {
+        "title": "Tax Planning Opportunities",
+        "body": "Use CGT analysis to identify which assets to sell for tax efficiency.",
+        "highlights": [
+          "Harvest losses in down years to offset gains elsewhere.",
+          "Time sales to optimize discount eligibility and tax brackets."
+        ]
+      },
+      {
+        "title": "Ask AI — Workspace-Aware",
+        "body": "The Ask AI button (bottom-right) opens a chat assistant that knows both the current tab data AND your full portfolio — every entity, asset, holding, and value across the workspace.",
+        "highlights": [
+          "Ask tab-specific questions: \"why is this number negative?\" or \"what drove the return change?\"",
+          "Ask workspace-wide questions: \"what CFD assets do we have?\", \"which entity owns the most property?\", or \"list all equities with their current values.\"",
+          "The AI loads your workspace context on first use — no extra setup required.",
+          "Conversation history is maintained within the session."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "reports-tax-summary-tab",
+    "path": "/reports/tax-summary",
+    "title": "Tax Summary Tab",
+    "description": "Income pivot by type and counterparty — the view your accountant needs.",
+    "steps": [
+      {
+        "title": "Income & Expense Pivot",
+        "body": "Pivot all income and expenses by type (dividends, interest, rent, etc.) and counterparty (company, trust, individual). This is ATO-ready data for your tax return.",
+        "highlights": [
+          "Franking credits are tracked separately from dividend income.",
+          "Expenses grouped by category: interest, fees, professional services.",
+          "Each line item is auditable back to source events."
+        ]
+      },
+      {
+        "title": "Export for Tax Lodgement",
+        "body": "Download the tax summary as CSV for import into your accountant's software or ATO compliance tools.",
+        "highlights": [
+          "Format matches common accounting software requirements.",
+          "Use for SMSF tax returns, individual tax returns, or company returns."
+        ]
+      },
+      {
+        "title": "Ask AI — Workspace-Aware",
+        "body": "The Ask AI button (bottom-right) opens a chat assistant that knows both the current tab data AND your full portfolio — every entity, asset, holding, and value across the workspace.",
+        "highlights": [
+          "Ask tab-specific questions: \"why is this number negative?\" or \"what drove the return change?\"",
+          "Ask workspace-wide questions: \"what CFD assets do we have?\", \"which entity owns the most property?\", or \"list all equities with their current values.\"",
+          "The AI loads your workspace context on first use — no extra setup required.",
+          "Conversation history is maintained within the session."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "reports-movements-tab",
+    "path": "/reports/movements",
+    "title": "Investment Movements",
+    "description": "Per-asset period-bounded movement report showing opening values, acquisitions, disposals, and returns grouped by asset class.",
+    "steps": [
+      {
+        "title": "Movements Report",
+        "body": "The Movements tab shows what happened to each asset during a financial year: opening value, purchases, sales, income, and closing value grouped by asset class.",
+        "highlights": [
+          "Toggle between Summary (Macquarie style) and Detailed (Praemium style) formats.",
+          "Summary shows: Opening, Acquisitions, Disposals, Closing, Change in Value, Income, Total Return.",
+          "Detailed adds: Net Adjustments, Franking Credits, Capital Return %, and Income Return %."
+        ]
+      },
+      {
+        "title": "Ask AI — Workspace-Aware",
+        "body": "The Ask AI button (bottom-right) opens a chat assistant that knows both the current tab data AND your full portfolio — every entity, asset, holding, and value across the workspace.",
+        "highlights": [
+          "Ask tab-specific questions: \"why is this number negative?\" or \"what drove the return change?\"",
+          "Ask workspace-wide questions: \"what CFD assets do we have?\", \"which entity owns the most property?\", or \"list all equities with their current values.\"",
+          "The AI loads your workspace context on first use — no extra setup required.",
+          "Conversation history is maintained within the session."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "reports-performance-tab",
+    "path": "/reports/performance",
+    "title": "Performance Tab",
+    "description": "Portfolio performance metrics with three return methodologies, benchmark comparison, and quality flags.",
+    "steps": [
+      {
+        "title": "Three Return Metrics",
+        "body": "The Performance tab calculates three different return metrics. Hover the info icon next to each metric name to learn what it measures.",
+        "highlights": [
+          "TWR (Time-Weighted Return) measures investment performance independent of cash flows — use this to compare against benchmarks.",
+          "IWRR (Internal/Money-Weighted Return) accounts for the timing and size of your contributions and withdrawals — this shows what you actually earned.",
+          "MIRR (Modified IRR) is a fallback used when IWRR cannot be calculated due to complex cashflow patterns."
+        ]
+      },
+      {
+        "title": "Benchmark Comparison",
+        "body": "Compare your portfolio against market benchmarks over different time periods. Toggle benchmarks on or off to focus your analysis.",
+        "highlights": [
+          "Compare against ASX 200, All Ords, VAS, VGS, S&P 500, NASDAQ, Gold, and more.",
+          "Switch between 1M, 3M, 6M, 1Y, 3Y, 5Y, and YTD views.",
+          "Filter by entity to compare individual portfolio performance."
+        ]
+      },
+      {
+        "title": "Quality Flags & Warnings",
+        "body": "Quality flags indicate data gaps or classification issues that may affect return accuracy. Review these to understand your numbers.",
+        "highlights": [
+          "Stale valuations, missing start/end data, and unclassified flows are flagged automatically.",
+          "BUY and SELL events are classified as capital flows so IWRR correctly reflects DCA timing.",
+          "If IWRR shows the same value as TWR, check whether external flows are being classified."
+        ]
+      },
+      {
+        "title": "Ask AI — Workspace-Aware",
+        "body": "The Ask AI button (bottom-right) opens a chat assistant that knows both the current tab data AND your full portfolio — every entity, asset, holding, and value across the workspace.",
+        "highlights": [
+          "Ask tab-specific questions: \"why is this number negative?\" or \"what drove the return change?\"",
+          "Ask workspace-wide questions: \"what CFD assets do we have?\", \"which entity owns the most property?\", or \"list all equities with their current values.\"",
+          "The AI loads your workspace context on first use — no extra setup required.",
+          "Conversation history is maintained within the session."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "reports-benchmarks-tab",
+    "path": "/reports/benchmarks",
+    "title": "Benchmarks",
+    "description": "Compare portfolio returns against market benchmarks including ASX indices, global indices, and sector ETFs.",
+    "steps": [
+      {
+        "title": "Benchmark Comparison",
+        "body": "Compare your portfolio against market benchmarks. Select benchmarks, choose a time period, and switch between summary bar charts and timeline views.",
+        "highlights": [
+          "Compare against ASX 200, All Ords, VAS, VGS, S&P 500, NASDAQ, Gold, and more.",
+          "Your benchmark selection is saved to the workspace and reused across sessions.",
+          "Switch between Summary (bar chart) and Timeline (line chart) views."
+        ]
+      },
+      {
+        "title": "Ask AI — Workspace-Aware",
+        "body": "The Ask AI button (bottom-right) opens a chat assistant that knows both the current tab data AND your full portfolio — every entity, asset, holding, and value across the workspace.",
+        "highlights": [
+          "Ask tab-specific questions: \"why is this number negative?\" or \"what drove the return change?\"",
+          "Ask workspace-wide questions: \"what CFD assets do we have?\", \"which entity owns the most property?\", or \"list all equities with their current values.\"",
+          "The AI loads your workspace context on first use — no extra setup required.",
+          "Conversation history is maintained within the session."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "portfolio-reviews",
+    "path": "/reports/portfolio-reviews",
+    "title": "AI Portfolio Reviews",
+    "description": "AI-generated portfolio reviews with performance analytics, concentration risk, tax position, and trade ideas.",
+    "steps": [
+      {
+        "title": "Review Archive",
+        "body": "The archive lists all generated portfolio reviews with status, entity, and generation date. Filter by status or entity to find specific reviews.",
+        "highlights": [
+          "READY reviews can be opened for full analysis across all data tabs.",
+          "GENERATING reviews are still being processed — check back shortly.",
+          "FAILED reviews show the error reason on hover.",
+          "Click \"Generate Review\" to create an ad-hoc review for any entity."
+        ]
+      },
+      {
+        "title": "Review Viewer",
+        "body": "Each review has up to seven tabs: Summary (AI narrative), Performance (returns & holdings), Concentration & Risk (allocation & single-stock alerts), Tax Position (P&L & CGT), Cashflow (income vs expenses), Household (cross-entity), and Trade Ideas (AI suggestions).",
+        "highlights": [
+          "Tabs appear conditionally — only sections with available data are shown.",
+          "The AI narrative in Summary is generated from your actual portfolio numbers.",
+          "Trade Ideas can be annotated (Approve/Reject/Modify) and converted to scenarios.",
+          "Use the floating chat button to ask follow-up questions about the review."
+        ]
+      },
+      {
+        "title": "Report Chat",
+        "body": "The chat panel lets you ask natural language questions grounded in the report data. Ask about performance drivers, risk exposures, tax implications, or trade idea details.",
+        "highlights": [
+          "Questions are answered using this specific report's data — not general knowledge.",
+          "Suggested questions are provided for common queries.",
+          "Conversation history is maintained within the session.",
+          "The AI flags data quality issues rather than guessing with incomplete information."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "report-schedules",
+    "path": "/reports/portfolio-reviews/schedules",
+    "title": "Report Schedules",
+    "description": "Automate portfolio review generation and delivery on a recurring cadence.",
+    "steps": [
+      {
+        "title": "Creating a Schedule",
+        "body": "A schedule defines which entities to review, how often, and who receives the reports. Choose Monthly, Quarterly, or Annual frequency with a specific day of month.",
+        "highlights": [
+          "Entity scope \"All\" generates reviews for every active entity plus a consolidated household report.",
+          "Entity scope \"Selected\" lets you pick specific entities for focused reviews.",
+          "The \"Include trade ideas\" toggle controls whether AI trade suggestions are generated.",
+          "Schedules start in ACTIVE status and generate reports on their next run date."
+        ]
+      },
+      {
+        "title": "Managing Recipients",
+        "body": "Recipients are drawn from your workspace members. Each recipient can receive reports via Email, Portal, or Both.",
+        "highlights": [
+          "Only workspace members with email addresses appear as available recipients.",
+          "Delivery method is set per recipient — advisors may prefer email while members use the portal.",
+          "At least one recipient is required to create a schedule.",
+          "Add or remove recipients anytime by editing the schedule."
+        ]
+      },
+      {
+        "title": "Schedule Lifecycle",
+        "body": "Schedules can be paused and resumed without losing configuration. The background job system handles generation automatically.",
+        "highlights": [
+          "Pause a schedule to temporarily stop generation — useful during holiday periods.",
+          "Resume recalculates the next run date from the current date.",
+          "Delete removes the schedule permanently — generated reports are preserved.",
+          "The \"Last Run\" and \"Next Run\" columns show generation history and upcoming dates."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "report-tax-scan",
+    "path": "/reports/portfolio-reviews/tax-scan",
+    "title": "AI Tax Optimisation",
+    "description": "AI-driven tax recommendations analysed against Australian tax rules.",
+    "steps": [
+      {
+        "title": "Recommendation Queue",
+        "body": "The queue shows AI-generated tax strategies ranked by priority and projected benefit. Filter by status, type, or priority to focus on what matters most.",
+        "highlights": [
+          "Seven recommendation types: CGT timing, distribution strategy, franking, negative gearing, bucket company, cash optimisation, custom.",
+          "KPI cards summarise pending, accepted, implemented counts and total projected benefit.",
+          "Bulk actions let you accept or reject multiple recommendations at once.",
+          "Deep links connect recommendations to their related entity or asset."
+        ]
+      },
+      {
+        "title": "Making Decisions",
+        "body": "Expand any recommendation to see the full analysis: why it was suggested, action items, assumptions, and financial summary. Then accept, reject, or defer with notes.",
+        "highlights": [
+          "Notes are required when accepting or rejecting — they become governance evidence.",
+          "Defer postpones the recommendation for future review with an optional date.",
+          "Accepted recommendations can later be marked as Implemented with actual results.",
+          "The Accuracy & Health section tracks projected vs realised tax benefit over time."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tax-optimization",
+    "path": "/reports/tax-optimization",
+    "title": "Tax Optimization",
+    "description": "AI-generated tax recommendations ranked by priority and projected benefit.",
+    "steps": [
+      {
+        "title": "Recommendation Queue",
+        "body": "The queue shows AI-generated tax strategies ranked by priority. Filter by status, type, or priority to focus on what matters most.",
+        "highlights": [
+          "Recommendation types include CGT timing, distribution strategy, franking credits, negative gearing, and bucket company optimizations.",
+          "Each recommendation shows the projected tax benefit, confidence level, and related entity.",
+          "KPI cards summarize pending, accepted, implemented counts and total projected benefit."
+        ]
+      },
+      {
+        "title": "Acting On Recommendations",
+        "body": "Expand any recommendation to see the full analysis and take action. You can accept, reject, or defer each one individually or use bulk actions.",
+        "highlights": [
+          "Accept moves a recommendation to your implementation queue.",
+          "Reject dismisses it with an optional reason — helpful for tracking what was considered.",
+          "Defer postpones the recommendation for future review without rejecting it.",
+          "Use the header checkboxes to bulk-accept or bulk-reject filtered results."
+        ]
+      },
+      {
+        "title": "Accuracy & Health",
+        "body": "The Accuracy & Health tab tracks how well recommendations performed against projections, with pipeline diagnostics for transparency.",
+        "highlights": [
+          "Implemented recommendations compare projected vs realized tax benefit.",
+          "Accuracy percentage shows how reliable the AI suggestions have been over time.",
+          "Pipeline health shows total recommendations, AI percentage, average confidence, and type breakdown.",
+          "Configure the optimization policy (auto-generation, confidence threshold, active types) in Settings > General."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scenarios",
+    "path": "/scenarios",
+    "title": "Scenario Lab",
+    "description": "Model portfolio outcomes across macro assumptions, asset strategies, and person income events.",
+    "steps": [
+      {
+        "title": "Model At Portfolio Level",
+        "body": "Scenario Lab combines per-asset assumptions into one portfolio outcome so tradeoffs are visible.",
+        "highlights": [
+          "Mix BEAR/BASE/BULL by asset instead of forcing one portfolio-wide view.",
+          "Use inclusion toggles to isolate subsets before deciding.",
+          "Tax optimization recommendations are a separate tool — find them in your Compliance queue or configure the policy in Settings > General."
+        ]
+      },
+      {
+        "title": "Tune Macro Inputs Deliberately",
+        "body": "Inflation, rates, credit spreads, and volatility shift projections. Keep assumptions explicit and documented.",
+        "highlights": [
+          "Change one macro variable at a time to understand sensitivity.",
+          "Save assumptions before running so historical comparisons remain meaningful."
+        ]
+      },
+      {
+        "title": "Seven Tabs — Each A Focused Lens",
+        "body": "Each scenario opens as a full-width tabbed editor. Assumptions sets the inputs; Property, Tax Projection, Distributions, and Valuations model specific domains; Projection shows the outcome; Risk & Stress tests resilience.",
+        "highlights": [
+          "Property models rental income, vacancy, capital growth, and expenses per property asset.",
+          "Tax Projection shows projected tax liability with optional bracket creep simulation.",
+          "Risk & Stress uses portfolio betas to model correction, bear, GFC, and black swan scenarios.",
+          "Distributions models trust distribution flows across beneficiaries."
+        ]
+      },
+      {
+        "title": "Treat Runs As Decision Snapshots",
+        "body": "Each run is a timestamped snapshot tied to current ledger data and assumptions.",
+        "highlights": [
+          "Re-run after material events such as dividends, rent changes, or valuations.",
+          "Use run history to explain how decisions evolved over time."
+        ]
+      },
+      {
+        "title": "Inflation (%)",
+        "body": "Annual CPI-style inflation assumption applied as broad pressure across expenses and nominal growth assumptions.",
+        "highlights": [
+          "Higher inflation usually lifts expense growth and can compress real returns.",
+          "Start from current consensus and test sensitivity in +/-1% bands."
+        ]
+      },
+      {
+        "title": "Cash Rate (%)",
+        "body": "Policy rate proxy that influences borrowing costs, discount rates, and risk appetite in projections.",
+        "highlights": [
+          "Higher cash rates typically pressure leveraged assets and financing-heavy portfolios.",
+          "Use this to test refinancing and debt-servicing resilience."
+        ]
+      },
+      {
+        "title": "10Y Yield (%)",
+        "body": "Long-dated government bond yield proxy for long-run discounting and valuation pressure.",
+        "highlights": [
+          "Rising long yields often reduce present values of long-duration assets.",
+          "Use alongside cash rate to model steepening or flattening rate regimes."
+        ]
+      },
+      {
+        "title": "Unemployment (%)",
+        "body": "Labour-market stress indicator used to proxy demand strength and downside income pressure.",
+        "highlights": [
+          "Higher unemployment usually increases downside risk to rent/dividend growth assumptions.",
+          "Pair with wage growth for realistic household-income scenarios."
+        ]
+      },
+      {
+        "title": "Wage Growth (%)",
+        "body": "Expected annual wage growth used for person-income trend assumptions and household cashflow realism.",
+        "highlights": [
+          "Use this as the base drift before event-specific overrides (for example moving part-time).",
+          "Check consistency with inflation to avoid unrealistic real wage outcomes."
+        ]
+      },
+      {
+        "title": "Credit Spread (%)",
+        "body": "Risk premium over government rates; useful for stress-testing credit conditions and refinancing risk.",
+        "highlights": [
+          "Wider spreads generally mean tighter credit and higher financing costs.",
+          "Stress this in downturn cases where liquidity is reduced."
+        ]
+      },
+      {
+        "title": "VIX Level",
+        "body": "Market volatility proxy used to model risk-off behaviour and valuation uncertainty.",
+        "highlights": [
+          "Higher VIX generally implies lower risk appetite and wider valuation ranges.",
+          "Use elevated values in bear scenarios to test drawdown tolerance."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "transactions",
+    "path": "/accounting/transactions",
+    "title": "Transactions",
+    "description": "Review and manage portfolio-wide financial events, cashflow, and reconciliation handoffs.",
+    "steps": [
+      {
+        "title": "Portfolio Event Ledger",
+        "body": "This page consolidates income, expenses, and event activity across assets and entities so you can spot anomalies quickly.",
+        "highlights": [
+          "Use this as the operational source-of-truth before tax or reporting reviews.",
+          "Totals depend on complete ownership and event classification data."
+        ]
+      },
+      {
+        "title": "Filter Before You Decide",
+        "body": "Narrow by event type, date range, and related records before taking action to avoid broad accidental changes.",
+        "highlights": [
+          "Prioritize unreconciled or unusual events first.",
+          "Work from newest-to-oldest during active import/reconciliation periods."
+        ]
+      },
+      {
+        "title": "Hand Off To Reconciliation",
+        "body": "If events are incomplete or ambiguous, move to reconciliation to match source bank activity and improve audit quality.",
+        "highlights": [
+          "Resolve mismatches before relying on cashflow and tax outputs.",
+          "Use transaction evidence documents for defensible compliance history."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "reconciliation",
+    "path": "/reconciliation",
+    "title": "Bank Reconciliation",
+    "description": "Match imported bank transactions against financial events, link to assets, and flag governance items.",
+    "steps": [
+      {
+        "title": "Import And Auto-Match",
+        "body": "Upload a bank CSV and the system auto-matches transactions against existing financial events by date and amount.",
+        "highlights": [
+          "Reconciliation is available for CASH assets only — start from the Assets page.",
+          "Auto-matched transactions are high-confidence; review suggested matches manually."
+        ]
+      },
+      {
+        "title": "Link Transactions To The Right Asset",
+        "body": "The AI suggests which asset each transaction relates to based on description keywords. You can override or clear any suggestion.",
+        "highlights": [
+          "Use \"Suggest Assets\" to run analysis on sessions imported before this feature existed.",
+          "The asset picker searches by name, type, and owner — use it to quickly narrow results.",
+          "New assets can be created in a new tab without losing your triage progress."
+        ]
+      },
+      {
+        "title": "Triage Actions Explained",
+        "body": "Each transaction has four possible actions depending on its context. Identical transactions are grouped automatically so you can act on them in bulk.",
+        "highlights": [
+          "Confirm: Accept a suggested or auto-match — the event is already recorded.",
+          "Create Event: Generate a new financial event on the linked (or session) asset.",
+          "Ignore: Skip this transaction — it won't be reconciled.",
+          "Flag for Review: Creates a work item in your compliance queue for governance-sensitive transactions (e.g., related party loans, trust distributions)."
+        ]
+      },
+      {
+        "title": "Bulk & Group Actions",
+        "body": "Transactions with identical descriptions are grouped together. Use group-level and bulk actions to triage faster.",
+        "highlights": [
+          "Groups show a combined total, date range, and average AI confidence.",
+          "Use \"Record N\" or \"Ignore All\" on a group header to act on every transaction in that group at once.",
+          "Use the header checkbox to select multiple transactions, then apply Record All, Confirm All, or Ignore All from the bulk toolbar."
+        ]
+      },
+      {
+        "title": "Expense Classification",
+        "body": "Bank debits are automatically classified as entity expenses when they match known patterns like ASIC fees, ATO payments, or software subscriptions.",
+        "highlights": [
+          "Classifications appear as badges on matching transactions with confidence scores.",
+          "Recognised expenses include PAYG instalments, regulatory fees, professional fees, and software subscriptions.",
+          "Create the event to record it as an entity expense — the type, counterparty, and GST status are pre-filled."
+        ]
+      },
+      {
+        "title": "Transfer Detection",
+        "body": "Internal transfers between your own bank accounts are automatically detected. The system matches debits and credits with the same amount within a few days.",
+        "highlights": [
+          "Detected transfers appear in a grouped section above the transaction table.",
+          "Use \"Confirm Transfer\" to mark both sides as internal movements (not income or expense).",
+          "Same-day transfers with similar descriptions have the highest confidence."
+        ]
+      },
+      {
+        "title": "Learned Patterns",
+        "body": "Every time you triage a transaction by creating an event, the system remembers the description pattern. Next time a similar transaction appears, it auto-suggests the same asset and event type.",
+        "highlights": [
+          "Patterns improve with use — confidence increases each time the same pattern is matched.",
+          "This works alongside the keyword-based asset guesser for comprehensive auto-matching."
+        ]
+      },
+      {
+        "title": "Mistakes Are Reversible",
+        "body": "Every resolved transaction has an undo button. Undoing a created event also deletes it.",
+        "highlights": [
+          "Undo resets a transaction back to Unmatched so you can re-triage it.",
+          "Sort by date or amount to quickly find specific transactions.",
+          "Completing a session with unmatched items shows a confirmation warning."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "accounting-trial-balance",
+    "path": "/accounting/trial-balance",
+    "title": "Trial Balance",
+    "description": "View the double-entry trial balance across all accounts for any financial year.",
+    "steps": [
+      {
+        "title": "Trial Balance Report",
+        "body": "The trial balance shows debit and credit totals for every account in the chart of accounts. Use it to verify that the books balance before generating financial statements.",
+        "highlights": [
+          "Debits and credits should always balance — any discrepancy indicates a posting error.",
+          "Filter by entity and financial year to isolate specific ledger views.",
+          "Drill into any account to see the underlying journal entries."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "accounting-profit-loss",
+    "path": "/accounting/profit-loss",
+    "title": "Profit & Loss",
+    "description": "Income and expense statement derived from the general ledger.",
+    "steps": [
+      {
+        "title": "P&L Statement",
+        "body": "The P&L report shows revenue, expenses, and net income for a financial year. All figures are derived from posted journal entries.",
+        "highlights": [
+          "Revenue lines include dividends, interest, rent, and distributions.",
+          "Expense lines include management fees, professional fees, and entity-level costs.",
+          "Compare across financial years to spot trends."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "accounting-balance-sheet",
+    "path": "/accounting/balance-sheet",
+    "title": "Balance Sheet",
+    "description": "Assets, liabilities, and equity position at a point in time.",
+    "steps": [
+      {
+        "title": "Balance Sheet Report",
+        "body": "View the entity's financial position: assets held, liabilities outstanding, and net equity. Derived from the general ledger.",
+        "highlights": [
+          "Assets reflect current market value as recorded in asset revaluations.",
+          "Liabilities include credit facilities and director loan accounts.",
+          "Equity is the residual: assets minus liabilities."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "accounting-account-ledger",
+    "path": "/accounting/account-ledger",
+    "title": "Account Ledger",
+    "description": "Drill into individual account activity — every journal entry line for a specific account.",
+    "steps": [
+      {
+        "title": "Account Detail",
+        "body": "Select an account from the chart of accounts to see all journal entry lines, running balance, and source event links.",
+        "highlights": [
+          "Click any entry to jump to the source financial event in the Transactions tab.",
+          "Running balance shows the account's cumulative position.",
+          "Filter by date range or entity for targeted review."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "settings-general-tab",
+    "path": "/settings",
+    "title": "General Tab",
+    "description": "Display preferences, portfolio settings, and AI prompt configuration.",
+    "steps": [
+      {
+        "title": "Preferences Overview",
+        "body": "The Preferences tab controls your browser-local display behavior. Changes apply immediately for your current browser and do not change workspace policy.",
+        "highlights": [
+          "Date format supports Australian or browser/OS locale preferences.",
+          "Structure density controls spacing in entity and asset hierarchy visualizations.",
+          "Workspace policies like tax or governance live in other tabs."
+        ]
+      },
+      {
+        "title": "Display Preferences",
+        "body": "Choose date format and structure layout density. These are browser-local preferences — they apply immediately and are not shared with other team members.",
+        "highlights": [
+          "Australian format (dd/mm/yyyy) is the default. Switch to browser default if your OS uses a different locale.",
+          "Structure density controls spacing in entity/asset hierarchy views — Auto adapts based on portfolio size."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "settings-workflows-tab",
+    "path": "/settings?tab=integrations",
+    "title": "Integrations & Automation Tab",
+    "description": "Configure workflow automation, DMS connections, and email ingestion.",
+    "steps": [
+      {
+        "title": "Enable Workflow Automation",
+        "body": "The master toggle enables the entire workflow engine for your workspace. When active, individual workflow definitions can be enabled or disabled independently. Disabling the master toggle terminates active workflow instances.",
+        "highlights": [
+          "Auto workflows trigger automatically when governance rules detect issues.",
+          "Manual workflows can be started from asset and entity pages.",
+          "Disabling the master toggle with active instances will permanently delete all workflow items and history — use with caution."
+        ]
+      },
+      {
+        "title": "Workflow Definitions",
+        "body": "Each workflow definition represents a repeatable process (e.g., \"Trust Deed Review\", \"Annual Tax Preparation\"). Enable the definitions you use, disable the ones you handle externally.",
+        "highlights": [
+          "Each definition shows its auto-trigger pattern — when enabled, matching insights trigger the workflow automatically.",
+          "Manual definitions can be started any time from asset/entity pages.",
+          "Edit definition settings to tune auto-trigger behavior for your team."
+        ]
+      },
+      {
+        "title": "Tax Recommendation Policy",
+        "body": "Control AI tax recommendation automation by toggling auto-generation, setting confidence thresholds, and selecting enabled recommendation types.",
+        "highlights": [
+          "Use higher confidence thresholds to reduce noisy recommendations.",
+          "Disable recommendation types your team handles externally.",
+          "These settings are workspace-wide and apply to all members."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "settings-governance-tab",
+    "path": "/settings?tab=governance",
+    "title": "Governance & Compliance Tab",
+    "description": "Control compliance checks, return exception policies, and tax optimization.",
+    "steps": [
+      {
+        "title": "Governance Rules Categories",
+        "body": "Governance rules are organized into 11 categories covering trust administration, company administration, asset integrity, tax compliance, accounting, alternative assets, ownership, and more. Each rule can be enabled or disabled independently.",
+        "highlights": [
+          "Categories include Trust Admin, Company Admin, Asset Integrity, Tax Compliance, Accounting Compliance, Alternative Assets, Ownership Compliance, and more.",
+          "Disabled rules will not generate compliance insights or work queue items.",
+          "Disabling a rule stops new insights from being generated — existing work items remain until resolved."
+        ]
+      },
+      {
+        "title": "Refresh Governance Checks",
+        "body": "After changing rule settings, re-run the governance check to refresh the compliance queue with the new rule set.",
+        "highlights": [
+          "Click \"Re-run Governance Checks\" button to apply rule changes immediately.",
+          "The check runs in the background and updates the queue within seconds.",
+          "Use this after structural changes (adding/removing entities, changing ownership)."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "settings-ai-tab",
+    "path": "/settings?tab=general",
+    "title": "AI Prompts",
+    "description": "Customize system prompts that drive AI-powered features (in General tab).",
+    "steps": [
+      {
+        "title": "AI Prompts Overview",
+        "body": "System prompts control how AI behaves across document analysis, chat, insights, tax recommendations, and other AI features. Prompts are seeded from platform defaults but can be customized per workspace.",
+        "highlights": [
+          "Each prompt has a category, model assignment, and description.",
+          "Edit the template to tune AI responses — use {{variables}} for dynamic content.",
+          "Test changes on non-critical operations before applying to compliance or tax workflows."
+        ]
+      },
+      {
+        "title": "Editing Prompts",
+        "body": "Click any prompt to edit its template. Use {{text}} and other placeholders to reference document content or dynamic data.",
+        "highlights": [
+          "Prompts can target different models: OpenAI (gpt-4o), Google (gemini-2.5-flash), or Claude.",
+          "Inactive prompts will not be used — toggle the active checkbox to enable/disable.",
+          "Save changes and test on a non-critical document first to verify the AI behavior changes as intended."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "settings-integrations-tab",
+    "path": "/settings?tab=integrations",
+    "title": "Integrations",
+    "description": "Connect external services like Microsoft 365 and email ingestion (in Integrations & Automation tab).",
+    "steps": [
+      {
+        "title": "SharePoint & OneDrive Connection",
+        "body": "Connect to Microsoft 365 to browse and link documents from SharePoint or OneDrive. The connection uses OAuth and automatically refreshes access tokens.",
+        "highlights": [
+          "Click \"Connect to Microsoft 365\" to authenticate with your Microsoft account.",
+          "Connected status shows your account name and token expiry date.",
+          "If the access token expires but you have a refresh token, access continues automatically.",
+          "Disconnecting removes authentication only — document metadata and links are preserved."
+        ]
+      },
+      {
+        "title": "Email Ingestion Configuration",
+        "body": "Enable automatic processing of financial documents forwarded to your workspace ingest address. Supports trade confirmations, bank statements, and dividend notices via the SendGrid Inbound Parse pipeline.",
+        "highlights": [
+          "Enable the toggle and select a default cash asset — your unique ingest address is then shown.",
+          "Set up a forwarding rule in your email client or broker to send statements automatically.",
+          "Received Documents dashboard shows each email with PENDING / EXTRACTED / FAILED status and links to results.",
+          "Failed extractions route to the Work Item queue for human review — nothing is silently dropped."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "settings-team-tab",
+    "path": "/settings?tab=team",
+    "title": "Team & Access Tab",
+    "description": "Manage workspace members, beneficiary access, and companion devices.",
+    "steps": [
+      {
+        "title": "Team Members & Access Control",
+        "body": "Manage workspace members and assign roles. Each member's edit scope depends on their workspace role plus their linked Person entity.",
+        "highlights": [
+          "Owners and Admins can edit everything.",
+          "Editors need a linked Person entity to define their governance scope.",
+          "Assign the Admin service role for full edit access without governance constraints.",
+          "Viewers are always read-only regardless of Person link or service roles."
+        ]
+      },
+      {
+        "title": "Inviting Members",
+        "body": "Send invitations to new team members. They receive an email link to join the workspace and are assigned a role on arrival.",
+        "highlights": [
+          "Invitations include a one-time signup link — once claimed, they cannot be reused.",
+          "Invited members can be assigned to Viewer, Editor, Admin, or Owner roles.",
+          "Editors without a linked Person entity have no edit permissions until linked."
+        ]
+      },
+      {
+        "title": "Linking Person Entities",
+        "body": "Link each team member to their Person entity to define which assets, entities, and governance scope they can edit.",
+        "highlights": [
+          "Editors must be linked to a Person entity to have any edit permissions.",
+          "An Unlinked Editor cannot modify anything until linked.",
+          "Use Person linking to implement role-based access control and governance boundaries."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "settings-beneficiary-portal",
+    "path": "/settings?tab=team",
+    "title": "Beneficiary Portal",
+    "description": "Grant beneficiaries read-only access to their distribution statements and tax documents via a secure, separate portal.",
+    "steps": [
+      {
+        "title": "What Is The Beneficiary Portal?",
+        "body": "The Beneficiary Portal gives trust beneficiaries a secure, read-only view of their distribution history, tax labels (MTAS), and supporting documents — without granting them workspace access.",
+        "highlights": [
+          "Beneficiaries log in via a magic-link email — no password required.",
+          "Portal access is completely separate from workspace membership.",
+          "Enable the portal under Settings → Team & Access → Beneficiary Portal tab.",
+          "Each beneficiary can only see the entities and distribution types you explicitly allow."
+        ]
+      },
+      {
+        "title": "Inviting A Beneficiary",
+        "body": "Open any Person entity page and click \"Invite Person\". Select \"Portal\" or \"Both\" mode. Choose which entities they can access and which distribution types are visible, then send.",
+        "highlights": [
+          "The unified invite dialog handles workspace and portal invites in one flow.",
+          "Portal invites create a BeneficiaryAccess record — not a WorkspaceMember.",
+          "Token-based invite links expire after 7 days. Use \"Resend Invite\" if needed.",
+          "Revoke access at any time from Settings → Team & Access → Beneficiary Portal."
+        ]
+      },
+      {
+        "title": "Branding The Portal",
+        "body": "Customise the portal with your trust name, logo, primary colour, and contact email. Beneficiaries will see your branding on the dashboard and in email notifications.",
+        "highlights": [
+          "Upload a logo (PNG/SVG recommended) for the portal header.",
+          "Set a primary colour to match your family office brand.",
+          "Contact email appears in footer and error messages.",
+          "Branding is workspace-specific — each workspace has its own portal identity."
+        ]
+      },
+      {
+        "title": "Security & Access Control",
+        "body": "Portal sessions are cookie-based with short TTL. Brute-force protection locks out after 5 failed claim attempts for 30 minutes. All portal activity is logged.",
+        "highlights": [
+          "Invite tokens are single-use — claiming a token invalidates it.",
+          "Failed token attempts are rate-limited per IP (5 per minute).",
+          "Access can be revoked instantly from the Beneficiary Access table.",
+          "Portal activity log is available under Settings → Team & Access."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "documents",
+    "path": "/documents",
+    "title": "Document Vault",
+    "description": "Manage linked files, metadata quality, previews, and compliance alignment.",
+    "steps": [
+      {
+        "title": "Prioritize Metadata Quality",
+        "body": "Document classification and purpose should match the linked asset/entity context.",
+        "highlights": [
+          "AI scan results are useful only when links are accurate.",
+          "Resolve mismatches early to reduce governance noise."
+        ]
+      },
+      {
+        "title": "Preview Before You Rely",
+        "body": "Use previews and source links to verify the document is current and relevant.",
+        "highlights": [
+          "Treat vault records as evidence, not storage only.",
+          "Link from asset/entity views when context matters."
+        ]
+      },
+      {
+        "title": "AI-Powered Document Analysis",
+        "body": "When documents are linked and scanned, the AI extracts key metadata, classifies document types, and flags mismatches against entity and asset records.",
+        "highlights": [
+          "AI scan results include extracted dates, amounts, parties, and document classification.",
+          "Mismatches between scanned data and recorded entity/asset details create governance insights.",
+          "Use scan results to validate trust deed dates, policy amounts, and ownership details without manual review."
+        ]
+      },
+      {
+        "title": "Ask AI About Your Documents",
+        "body": "Use the Ask AI feature to ask natural language questions about your documents and get answers with source citations.",
+        "highlights": [
+          "Ask AI is available in the Documents tab of any Asset or Entity detail page.",
+          "Ask questions like \"when was the trust incorporated?\" or \"what distributions were paid last year?\"",
+          "The AI searches all workspace documents, returns relevant sources with relevance scores, and supports multi-turn conversations.",
+          "Enables natural language Q&A across your entire document vault without manual searching."
+        ]
+      }
+    ]
+  }
+]

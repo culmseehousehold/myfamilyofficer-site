@@ -42,43 +42,41 @@ export default function Hero() {
             <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </Link>
           <Link
-            href="#"
+            href="/tour"
             className="text-base font-semibold leading-6 text-slate-900 hover:text-indigo-600 transition-colors flex items-center gap-2 dark:text-slate-200 dark:hover:text-indigo-400"
           >
             <PlayCircle className="h-5 w-5" />
-            Watch the 2-Minute Demo
+            Start Interactive Tour
           </Link>
         </div>
 
-        {/* Optional Dashboard Preview Mockup/Hero Image Placeholder */}
+        {/* Video Placeholder */}
         <div className="mt-16 sm:mt-24 md:mx-auto md:max-w-5xl lg:max-w-none">
           <div className="relative rounded-xl bg-slate-900/5 p-2 ring-1 ring-inset ring-slate-900/10 lg:-m-4 lg:rounded-2xl lg:p-4 dark:bg-white/5 dark:ring-white/10 backdrop-blur-sm">
-             <div className="bg-white aspect-[16/9] rounded-lg shadow-2xl ring-1 ring-slate-900/10 flex items-center justify-center dark:bg-slate-900 dark:ring-white/10 overflow-hidden relative">
-                {/* Abstract UI representation */}
-                <div className="absolute inset-0 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 p-8 flex flex-col gap-4">
-                  <div className="flex gap-4 mb-4">
-                    <div className="w-1/4 h-32 bg-white/60 dark:bg-slate-700/50 rounded-lg shadow-sm animate-pulse"></div>
-                    <div className="w-1/4 h-32 bg-white/60 dark:bg-slate-700/50 rounded-lg shadow-sm animate-pulse delay-75"></div>
-                    <div className="w-1/4 h-32 bg-white/60 dark:bg-slate-700/50 rounded-lg shadow-sm animate-pulse delay-150"></div>
-                    <div className="w-1/4 h-32 bg-white/60 dark:bg-slate-700/50 rounded-lg shadow-sm animate-pulse delay-200"></div>
-                  </div>
-                  <div className="flex-1 bg-white/80 dark:bg-slate-700/50 rounded-lg shadow-sm w-full h-full relative overflow-hidden">
-                    <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-indigo-50/50 to-transparent dark:from-indigo-900/20"></div>
-                     <div className="p-6">
-                        <div className="h-4 w-1/3 bg-slate-200 dark:bg-slate-600 rounded mb-4"></div>
-                        <div className="h-64 w-full bg-slate-100 dark:bg-slate-600/50 rounded flex items-end justify-between px-4 pb-0 pt-8 gap-2">
-                             {[40, 65, 50, 80, 55, 90, 70, 85, 60, 95, 75, 100].map((h) => (
-                                 <div key={h} style={{height: `${h}%`}} className="w-full bg-indigo-500/80 rounded-t-sm"></div>
-                             ))}
-                        </div>
-                     </div>
-                  </div>
+             <Link href="/tour" className="bg-slate-950 aspect-[16/9] rounded-lg shadow-2xl ring-1 ring-slate-900/10 flex items-center justify-center dark:ring-white/10 overflow-hidden relative group cursor-pointer block">
+                {/* Play Button Overlay */}
+                <div className="absolute inset-0 flex items-center justify-center z-20 bg-black/20 group-hover:bg-black/10 transition-colors">
+                    <div className="h-20 w-20 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 shadow-lg group-hover:scale-110 transition-transform">
+                        <PlayCircle className="h-10 w-10 text-white fill-current" />
+                    </div>
                 </div>
-                {/* Overlay Text */}
-                <span className="absolute text-slate-400 font-medium text-sm bg-white/80 px-3 py-1 rounded shadow-sm z-10 dark:bg-slate-800 dark:text-slate-500">
-                    Interactive Dashboard Preview
+                
+                {/* Simulated UI Snapshot (Static) */}
+                <div className="absolute inset-0 bg-slate-900 p-8 flex flex-col gap-4 opacity-50">
+                   {/* This would be replaced by an actual screenshot or <video> tag later */}
+                   <div className="flex gap-4">
+                      <div className="w-64 bg-slate-800 h-full rounded-lg"></div>
+                      <div className="flex-1 space-y-4">
+                          <div className="h-32 bg-slate-800 rounded-lg"></div>
+                          <div className="h-64 bg-slate-800 rounded-lg"></div>
+                      </div>
+                   </div>
+                </div>
+                
+                <span className="absolute bottom-4 text-slate-400 font-mono text-xs z-10">
+                    See how FamilyOfficer handles complex Trust Structures
                 </span>
-             </div>
+             </Link>
           </div>
         </div>
       </div>

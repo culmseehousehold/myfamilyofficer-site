@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "generatedAt": "2026-03-21T09:00:00Z",
+    "version": "1.0.0",
+    "scenario": "Wayne Family Office"
+  },
+  "user": {
+    "name": "Bruce Wayne",
+    "role": "Principal",
+    "avatar": "BW"
+  },
+  "summary": {
+    "totalNetWorth": 48500000,
+    "currency": "AUD",
+    "changePercent": 2.4,
+    "changeValue": 1136000
+  },
+  "entities": [
+    {
+      "id": "e_wayne_trust",
+      "name": "The Wayne Family Trust",
+      "type": "Discretionary Trust",
+      "abn": "12 345 678 901",
+      "valuation": 25000000,
+      "status": "Compliant"
+    },
+    {
+      "id": "e_wayne_ent",
+      "name": "Wayne Enterprises Pty Ltd",
+      "type": "Company (Bucket)",
+      "acn": "987 654 321",
+      "valuation": 18500000,
+      "status": "Attention Required"
+    },
+    {
+      "id": "e_wayne_smsf",
+      "name": "Wayne SMSF",
+      "type": "Super Fund",
+      "abn": "11 222 333 444",
+      "valuation": 5000000,
+      "status": "Compliant"
+    }
+  ],
+  "assets": [
+    {
+      "id": "a_manor",
+      "name": "Wayne Manor (Toorak)",
+      "type": "Property",
+      "entityId": "e_wayne_trust",
+      "value": 15000000,
+      "currency": "AUD",
+      "lastValuation": "2025-12-31"
+    },
+    {
+      "id": "a_spacex",
+      "name": "SpaceX - Series B Preferred",
+      "type": "Private Equity",
+      "entityId": "e_wayne_ent",
+      "value": 12000000,
+      "currency": "USD",
+      "lastValuation": "2026-02-15"
+    },
+    {
+      "id": "a_wyn",
+      "name": "Wayne Enterprises (ASX:WYN)",
+      "type": "Public Equity",
+      "entityId": "e_wayne_ent",
+      "value": 6500000,
+      "currency": "AUD",
+      "lastValuation": "Live"
+    },
+    {
+      "id": "a_gotham_fund",
+      "name": "Gotham Tech Fund II",
+      "type": "Managed Fund",
+      "entityId": "e_wayne_smsf",
+      "value": 5000000,
+      "currency": "AUD",
+      "lastValuation": "2026-03-01"
+    },
+    {
+      "id": "a_wine",
+      "name": "Vintage 1982 Petrus (Case)",
+      "type": "Lifestyle",
+      "entityId": "e_wayne_trust",
+      "value": 10000000,
+      "currency": "AUD",
+      "lastValuation": "2025-06-30"
+    }
+  ],
+  "ragDocuments": [
+    {
+      "id": "d_deed",
+      "title": "Trust Deed - Wayne Family Trust (2014).pdf",
+      "category": "Governance",
+      "contentSnippet": "Clause 4.2: The Trustee may, at their absolute discretion, distribute income to any Primary Beneficiary..."
+    },
+    {
+      "id": "d_inv_policy",
+      "title": "Investment Policy Statement v3.pdf",
+      "category": "Policy",
+      "contentSnippet": "Asset Allocation Target: 40% Private Equity, 30% Real Estate, 20% Public Equities, 10% Cash/Bonds."
+    },
+    {
+      "id": "d_div7a",
+      "title": "Div 7A Loan Agreement - FY25.pdf",
+      "category": "Compliance",
+      "contentSnippet": "Loan Amount: $450,000. Interest Rate: 8.77% (Benchmark). Term: 7 Years. Security: Unsecured."
+    }
+  ],
+  "agentLogs": [
+    {
+      "id": "log_1",
+      "timestamp": "09:42:15",
+      "agent": "ComplianceBot",
+      "action": "SCANNING",
+      "message": "Analyzing 'Div 7A Loan Agreement' against ATO Benchmark Rates..."
+    },
+    {
+      "id": "log_2",
+      "timestamp": "09:42:18",
+      "agent": "ComplianceBot",
+      "action": "VERIFIED",
+      "message": "Interest Rate 8.77% matches FY26 Statutory Benchmark. Status: COMPLIANT."
+    },
+    {
+      "id": "log_3",
+      "timestamp": "09:42:22",
+      "agent": "AssetBot",
+      "action": "FETCHING",
+      "message": "Retrieving latest NAV for 'SpaceX Series B' from Carta integration..."
+    },
+    {
+      "id": "log_4",
+      "timestamp": "09:42:25",
+      "agent": "AssetBot",
+      "action": "UPDATE",
+      "message": "Pre-money valuation adjustment detected (+12%). Updating portfolio..."
+    }
+  ]
+}

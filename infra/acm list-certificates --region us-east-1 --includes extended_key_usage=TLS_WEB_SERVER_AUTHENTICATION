@@ -1,0 +1,27 @@
+{
+    "CertificateSummaryList": [
+        {
+            "CertificateArn": "arn:aws:acm:us-east-1:889947798435:certificate/24844565-1ac4-40ae-891b-5e62e241f9f7",
+            "DomainName": "www.myfamilyofficer.com",
+            "SubjectAlternativeNameSummaries": [
+                "www.myfamilyofficer.com",
+                "wwwpreview.myfamilyofficer.com",
+                "wwwbeta.myfamilyofficer.com",
+                "www1.myfamilyofficer.com",
+                "*.myfamilyofficer.com",
+                "myfamilyofficer.com"
+            ],
+            "HasAdditionalSubjectAlternativeNames": false,
+            "Status": "PENDING_VALIDATION",
+            "Type": "AMAZON_ISSUED",
+            "KeyAlgorithm": "RSA-2048",
+            "KeyUsages": [],
+            "ExtendedKeyUsages": [],
+            "ExportOption": "DISABLED",
+            "InUse": false,
+            "Exported": false,
+            "RenewalEligibility": "INELIGIBLE",
+            "CreatedAt": "2026-03-21T11:14:52.328000+08:00"
+        }
+    ]
+}
