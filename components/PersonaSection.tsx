@@ -89,9 +89,9 @@ export default function PersonaSection() {
     <section className="py-24 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-base font-semibold leading-7 text-indigo-600 dark:text-indigo-400">Tailored For You</h2>
+          <h2 className="text-base font-semibold leading-7 text-indigo-600 dark:text-indigo-400">Used across the family office</h2>
           <p className="mt-2 text-3xl font-serif font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
-            Built for Every Stakeholder
+            Built for the Family Office
           </p>
           <p className="mt-4 text-lg leading-8 text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
             Whether you are preserving wealth, growing it, or managing it—FamilyOfficer creates a single source of truth for your entire ecosystem.
@@ -108,23 +108,27 @@ export default function PersonaSection() {
                 <persona.icon className="w-6 h-6" />
               </div>
 
-              <h3 className="text-xl font-bold mb-2">{persona.title}</h3>
-              <p className="text-sm font-medium mb-4 uppercase tracking-wider text-indigo-600 dark:text-indigo-400">{persona.subtitle}</p>
-              
-              <p className="mb-8 leading-relaxed text-slate-600 dark:text-slate-300">
-                {persona.description}
+              <h3 className="text-xl font-semibold mb-1 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                {persona.title}
+              </h3>
+              <p className="text-sm font-medium text-slate-500 mb-4 dark:text-slate-400 uppercase tracking-wider text-xs">
+                {persona.subtitle}
               </p>
               
-              <ul className="space-y-4 mb-8">
-                {persona.benefits.map((benefit) => (
-                  <li key={benefit} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 shrink-0 text-indigo-600 dark:text-indigo-400" />
-                    <span className="text-sm font-medium">{benefit}</span>
-                  </li>
+              <p className="text-slate-600 mb-6 leading-relaxed dark:text-slate-300">
+                {persona.description}
+              </p>
+
+              <ul className="space-y-2">
+                {persona.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-start text-sm text-slate-500 dark:text-slate-400">
+                        <Check className="w-4 h-4 mr-2 text-indigo-500 mt-0.5 flex-shrink-0" />
+                        {benefit}
+                    </li>
                 ))}
               </ul>
             </div>
-          ))}
+            ))}
         </div>
       </div>
     </section>

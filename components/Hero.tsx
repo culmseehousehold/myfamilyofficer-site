@@ -1,9 +1,16 @@
 // components/Hero.tsx
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, PlayCircle } from 'lucide-react';
+import { ArrowRight, PlayCircle, Check } from 'lucide-react';
 
 export default function Hero() {
+  const proofItems = [
+    'Multi-entity ownership and look-through reporting',
+    'Borrowings, distributions, and beneficiary tracking',
+    'SMSF, trust, and governance workflows',
+    'Portfolio, compliance, and document operations in one system',
+  ];
+
   return (
     <section className="relative overflow-hidden pt-36 pb-20 sm:pt-40 sm:pb-24 lg:pb-32 bg-slate-50 dark:bg-slate-950">
       {/* Background patterns */}
@@ -24,30 +31,42 @@ export default function Hero() {
         <h1 className="mx-auto max-w-4xl font-serif text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl dark:text-white">
           The Operating System for{' '}
           <span className="relative whitespace-nowrap text-indigo-700 dark:text-indigo-400">
-            <span className="relative">Australian Wealth</span>
+            <span className="relative">Australian Family Offices</span>
           </span>
           .
         </h1>
         
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-300">
-          Consolidate your entire wealth ecosystem—trusts, companies, and portfolios—into a single, real-time source of truth. Replace the fragmentation of Xero, BGL, and Excel with one unified platform.
+          Replace the fragmented stack of Xero, BGL, Excel, and SharePoint with one platform for entity-aware reporting, governance, compliance, and portfolio operations.
         </p>
 
         <div className="mt-10 flex items-center justify-center gap-x-6">
           <Link
-            href="/request-access"
+            href="/tour"
             className="rounded-md bg-indigo-700 px-5 py-3 text-base font-semibold text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-all dark:bg-indigo-600 dark:hover:bg-indigo-500 flex items-center group"
           >
-            Request Access
-            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            Start Product Tour
+            <PlayCircle className="ml-2 h-4 w-4 group-hover:scale-110 transition-transform" />
           </Link>
           <Link
-            href="/tour"
+            href="/request-access"
             className="text-base font-semibold leading-6 text-slate-900 hover:text-indigo-600 transition-colors flex items-center gap-2 dark:text-slate-200 dark:hover:text-indigo-400"
           >
-            <PlayCircle className="h-5 w-5" />
-            Start Interactive Tour
+            Request Beta Access
+            <ArrowRight className="h-5 w-5" />
           </Link>
+        </div>
+
+        {/* Proof Strip */}
+        <div className="mt-12 sm:mt-14">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto px-4 text-left sm:text-center">
+            {proofItems.map((item, index) => (
+              <div key={index} className="flex items-start sm:items-center sm:justify-center gap-2 text-sm text-slate-600 dark:text-slate-400 font-medium">
+                <Check className="h-4 w-4 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-0.5 sm:mt-0" />
+                <span>{item}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Video Placeholder */}
@@ -73,7 +92,7 @@ export default function Hero() {
                    </div>
                 </div>
                 
-                <span className="absolute bottom-4 text-slate-400 font-mono text-xs z-10">
+                <span className="absolute bottom-4 text-slate-400 font-mono text-xs z-10 w-full text-center">
                     See how FamilyOfficer handles complex Trust Structures
                 </span>
              </Link>

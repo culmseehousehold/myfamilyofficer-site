@@ -11,7 +11,7 @@ export default function ValueProp() {
             The New Standard for Wealth Operations
           </h2>
           <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-300">
-            Stop relying on yesterday’s numbers. See how FamilyOfficer transforms your operations.
+            Stop relying on yesterday's numbers. See how FamilyOfficer transforms your operations.
           </p>
         </div>
 
@@ -25,26 +25,32 @@ export default function ValueProp() {
               </div>
               <h3 className="text-2xl font-bold leading-8 text-slate-900 mt-2 dark:text-white">Fragmented & Manual</h3>
               <p className="text-base leading-7 text-slate-600 dark:text-slate-300">
-                Your wealth data is trapped in silos. You rely on <strong className="font-semibold text-slate-900 dark:text-white">Xero</strong> for cash, <strong className="font-semibold text-slate-900 dark:text-white">BGL</strong> for compliance, <strong className="font-semibold text-slate-900 dark:text-white">Excel</strong> for performance, and <strong className="font-semibold text-slate-900 dark:text-white">SharePoint</strong> for documents.
+                Tools designed for single purposes don't give you the complete picture. Each solution solves part of the problem—but leaves gaps.
               </p>
               
               <ul role="list" className="mt-4 space-y-4 text-base leading-7 text-slate-600 dark:text-slate-300">
                 <li className="flex gap-x-3 items-start">
                   <XCircle className="mt-1 h-5 w-5 flex-none text-red-500" aria-hidden="true" />
                   <span>
-                    <strong className="font-semibold text-slate-900 dark:text-white">The Cost:</strong> Hours of manual reconciliation every month.
+                    Xero handles books, not family-office operating context
                   </span>
                 </li>
                 <li className="flex gap-x-3 items-start">
                   <XCircle className="mt-1 h-5 w-5 flex-none text-red-500" aria-hidden="true" />
                   <span>
-                    <strong className="font-semibold text-slate-900 dark:text-white">The Risk:</strong> Version control errors and delayed reporting.
+                    BGL handles domain-specific compliance, not full-structure visibility
                   </span>
                 </li>
                 <li className="flex gap-x-3 items-start">
                   <XCircle className="mt-1 h-5 w-5 flex-none text-red-500" aria-hidden="true" />
                   <span>
-                    <strong className="font-semibold text-slate-900 dark:text-white">The Result:</strong> You’re always looking at yesterday’s numbers.
+                    Excel becomes the shadow reporting engine
+                  </span>
+                </li>
+                <li className="flex gap-x-3 items-start">
+                  <XCircle className="mt-1 h-5 w-5 flex-none text-red-500" aria-hidden="true" />
+                  <span>
+                    SharePoint becomes disconnected document storage
                   </span>
                 </li>
               </ul>
@@ -57,26 +63,26 @@ export default function ValueProp() {
               </div>
               <h3 className="text-2xl font-bold leading-8 text-slate-900 mt-2 dark:text-white">Unified & Automated</h3>
               <p className="text-base leading-7 text-slate-600 dark:text-slate-300">
-                We replace the patchwork of legacy tools with <strong className="font-semibold text-indigo-700 dark:text-indigo-400">one cohesive operating system</strong>.
+                One operating system designed for wealth management. FamilyOfficer becomes the connective tissue across all your tools and data.
               </p>
               
               <ul role="list" className="mt-4 space-y-4 text-base leading-7 text-slate-600 dark:text-slate-300">
                 <li className="flex gap-x-3 items-start">
                   <CheckCircle className="mt-1 h-5 w-5 flex-none text-indigo-600 dark:text-indigo-400" aria-hidden="true" />
                   <span>
-                    <strong className="font-semibold text-slate-900 dark:text-white">The Shift:</strong> Automated data ingestion from banks, brokers, and private assets.
+                    <strong className="font-semibold text-slate-900 dark:text-white">The Operating System:</strong> Unified context across books, compliance, and performance.
                   </span>
                 </li>
                 <li className="flex gap-x-3 items-start">
                   <CheckCircle className="mt-1 h-5 w-5 flex-none text-indigo-600 dark:text-indigo-400" aria-hidden="true" />
                   <span>
-                    <strong className="font-semibold text-slate-900 dark:text-white">The Speed:</strong> Reconciliation takes minutes, not hours.
+                    <strong className="font-semibold text-slate-900 dark:text-white">Full Visibility:</strong> Real-time look-through reporting across all entities.
                   </span>
                 </li>
                 <li className="flex gap-x-3 items-start">
                   <CheckCircle className="mt-1 h-5 w-5 flex-none text-indigo-600 dark:text-indigo-400" aria-hidden="true" />
                   <span>
-                    <strong className="font-semibold text-slate-900 dark:text-white">The Clarity:</strong> A real-time, consolidated view of your Net Worth across every entity.
+                    <strong className="font-semibold text-slate-900 dark:text-white">System of Record:</strong> Evidence, decisions, and documents linked to transactions.
                   </span>
                 </li>
               </ul>
