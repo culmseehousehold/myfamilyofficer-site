@@ -14,7 +14,7 @@ export default function CtaSection() {
           Stop managing your wealth in spreadsheets.
         </h2>
         <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-slate-300">
-          Join the forward-thinking Family Offices reducing their operating costs by 90%.
+          Join the Family Offices, SMSFs, and Advisory Firms reducing their operating overhead by 90%.
         </p>
         <div className="mt-10 flex items-center justify-center gap-x-6">
           <Link

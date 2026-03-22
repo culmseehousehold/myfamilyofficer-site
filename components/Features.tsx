@@ -28,7 +28,7 @@ const features = [
 const reasons = [
   {
     title: 'Sophistication Meets Simplicity',
-    desc: 'Finally, institutional-grade power without the $50k enterprise price tag. We handle complex Australian structures—discretionary trusts, companies, SMSFs—with the ease of modern software.',
+    desc: 'Finally, institutional-grade power without the enterprise price tag. Whether you manage a single SMSF or a multi-entity family group, we handle the complexity of Australian wealth structures.',
   },
   {
     title: 'The End of Manual Data Entry',
@@ -48,7 +48,7 @@ export default function Features() {
         
         {/* Why Choose Us Section - Integrated here as often Features and Benefits go together */}
         <div className="mx-auto max-w-2xl lg:text-center mb-20">
-          <h2 className="text-base font-semibold leading-7 text-indigo-600 dark:text-indigo-400">Why Family Offices Choose Us</h2>
+          <h2 className="text-base font-semibold leading-7 text-indigo-600 dark:text-indigo-400">Why Wealth Creators Choose Us</h2>
           <p className="mt-2 text-3xl font-serif font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
             Built for the Australian Wealth Landscape
           </p>
