@@ -11,8 +11,6 @@ export default function Navbar() {
     { name: 'Features', href: '/features' },
     { name: 'Product Tour', href: '/tour' },
     { name: 'How It Works', href: '/#how-it-works' },
-    // { name: 'Pricing', href: '#pricing' }, // Pricing not specifically asked for in section list, but "Pricing" is in Navbar requiremens
-    { name: 'Pricing', href: '#' },
     { name: 'Contact', href: '/#contact' },
   ];
 

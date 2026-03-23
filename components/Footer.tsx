@@ -7,22 +7,28 @@ export default function Footer() {
     <footer className="bg-white border-t border-slate-200 dark:bg-slate-950 dark:border-slate-800">
       <div className="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
         <div className="flex justify-center space-x-6 md:order-2">
-          <Link href='#' className="text-slate-500 hover:text-slate-900 dark:hover:text-slate-300">
+          <Link href='/terms' className="text-slate-500 hover:text-slate-900 dark:hover:text-slate-300">
             Terms
           </Link>
-          <Link href='#' className="text-slate-500 hover:text-slate-900 dark:hover:text-slate-300">
+          <Link href='/privacy' className="text-slate-500 hover:text-slate-900 dark:hover:text-slate-300">
             Privacy
           </Link>
-          <Link href='#' className="text-slate-500 hover:text-slate-900 dark:hover:text-slate-300">
+          <Link href='/security' className="text-slate-500 hover:text-slate-900 dark:hover:text-slate-300">
             Security
           </Link>
-          <Link href='#' className="text-slate-500 hover:text-slate-900 dark:hover:text-slate-300">
+          <Link href='/cookies' className="text-slate-500 hover:text-slate-900 dark:hover:text-slate-300">
+            Cookies
+          </Link>
+          <Link href='/disclaimer' className="text-slate-500 hover:text-slate-900 dark:hover:text-slate-300">
+            Disclaimer
+          </Link>
+          <Link href='mailto:support@tsg.com.au' className="text-slate-500 hover:text-slate-900 dark:hover:text-slate-300">
             Contact
           </Link>
         </div>
         <div className="mt-8 md:order-1 md:mt-0">
           <p className="text-center text-xs leading-5 text-slate-500 dark:text-slate-400">
-            &copy; {new Date().getFullYear()} FamilyOfficer Pty Ltd. All rights reserved.
+            &copy; {new Date().getFullYear()} Treasury Services Group. All rights reserved.
           </p>
           <p className="text-center text-xs leading-5 text-slate-400 mt-2 dark:text-slate-500">
             Institutional-Grade Wealth Operating System. Hosted securely in Australia.
