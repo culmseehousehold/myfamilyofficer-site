@@ -14,7 +14,7 @@ export default function CtaSection() {
           Stop managing your wealth in spreadsheets.
         </h2>
         <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-slate-300">
-          Join the Family Offices, SMSFs, and Advisory Firms reducing their operating overhead by 90%.
+          Join the Family Offices, SMSFs, and Advisory Firms who simply, effectively, dramatically reduce their administrative overhead.
         </p>
         <div className="mt-10 flex items-center justify-center gap-x-6">
           <Link
@@ -28,7 +28,7 @@ export default function CtaSection() {
           </Link>
         </div>
         <p className="mt-4 text-sm text-slate-400">
-           No credit card required for 14 days.
+          Hosted in Australia. Your data never leaves.
         </p>
       </div>
     </div>
