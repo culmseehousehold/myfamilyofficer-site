@@ -32,25 +32,25 @@ export default function ValueProp() {
                 <li className="flex gap-x-3 items-start">
                   <XCircle className="mt-1 h-5 w-5 flex-none text-red-500" aria-hidden="true" />
                   <span>
-                    Xero handles books, not family-office operating context
+                    Accounting software handles books, not family-office operating context
                   </span>
                 </li>
                 <li className="flex gap-x-3 items-start">
                   <XCircle className="mt-1 h-5 w-5 flex-none text-red-500" aria-hidden="true" />
                   <span>
-                    BGL handles domain-specific compliance, not full-structure visibility
+                    Compliance tools handle domain-specific reporting, not full-structure visibility
                   </span>
                 </li>
                 <li className="flex gap-x-3 items-start">
                   <XCircle className="mt-1 h-5 w-5 flex-none text-red-500" aria-hidden="true" />
                   <span>
-                    Excel becomes the shadow reporting engine
+                    Spreadsheets become the shadow reporting engine
                   </span>
                 </li>
                 <li className="flex gap-x-3 items-start">
                   <XCircle className="mt-1 h-5 w-5 flex-none text-red-500" aria-hidden="true" />
                   <span>
-                    SharePoint becomes disconnected document storage
+                    File shares become disconnected document storage
                   </span>
                 </li>
               </ul>

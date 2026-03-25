@@ -35,7 +35,7 @@ export default function FeaturesPage() {
           <span className="text-slate-600">Infrastructure for Private Wealth</span>
         </h1>
         <p className="font-sans text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
-          Proven technology to structure, measure, and optimize complex multi-entity portfolios with tax-aware precision.
+          Purpose-built technology to structure, measure, and optimize complex multi-entity portfolios with tax-aware precision.
         </p>
       </section>
 
@@ -108,7 +108,7 @@ export default function FeaturesPage() {
             <ul className="space-y-4 pt-4">
               {[
                 "Visualise flow-through distributions instantly.",
-                "Consolidated reporting across 50+ entities.",
+                "Consolidated reporting across dozens of entities.",
                 "Automatic inter-entity loan tracking."
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
@@ -128,7 +128,7 @@ export default function FeaturesPage() {
             </div>
             <h2 className="font-serif text-3xl md:text-4xl text-slate-900">Institutional Performance</h2>
             <p className="font-sans text-lg text-slate-600 leading-relaxed">
-              Stop guessing your true returns. We bring sovereign-fund level analytics to your private portfolio, stripping out noise to reveal true alpha.
+              Stop guessing your true returns. We bring institutional-grade analytics to your private portfolio, stripping out noise to reveal true alpha.
             </p>
              <ul className="space-y-4 pt-4">
               {[
@@ -152,7 +152,7 @@ export default function FeaturesPage() {
                   <BarChart3 className="w-4 h-4 text-emerald-600" />
                   <span className="text-sm font-semibold text-slate-700">YTD Performance Attribution</span>
                 </div>
-                <span className="text-xs text-slate-400 font-mono">LIVE DATA</span>
+                <span className="text-xs text-slate-400 font-mono">SAMPLE</span>
               </div>
 
               <div className="space-y-4">
@@ -251,7 +251,7 @@ export default function FeaturesPage() {
             </div>
             <h2 className="font-serif text-3xl md:text-4xl text-slate-900">Active Tax Optimization</h2>
             <p className="font-sans text-lg text-slate-600 leading-relaxed">
-              It’s not what you make, it’s what you keep. Our engine runs thousands of disposal scenarios (HIFO, LIFO, Min Tax) across all entities before you execute a trade.
+              It’s not what you make, it’s what you keep. Our engine models multiple disposal scenarios (HIFO, LIFO, Min Tax) across all entities before you execute a trade.
             </p>
              <ul className="space-y-4 pt-4">
               {[
@@ -276,7 +276,7 @@ export default function FeaturesPage() {
             </div>
             <h2 className="font-serif text-3xl md:text-4xl text-slate-900">AI Operations</h2>
             <p className="font-sans text-lg text-slate-600 leading-relaxed">
-              Let the machine handle the mundane. Our AI connects to your banks and brokers, categorizing transactions and flagging anomalies for human review.
+              Let the machine handle the mundane. Our AI ingests documents and data feeds, categorizing transactions and flagging anomalies for human review.
             </p>
              <ul className="space-y-4 pt-4">
               {[
@@ -345,15 +345,12 @@ export default function FeaturesPage() {
              Ready to Optimize?
            </h2>
            <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto font-light">
-             Join the family offices using our infrastructure to secure, measure, and grow their wealth across generations.
+             Infrastructure designed to secure, measure, and grow family wealth across generations.
            </p>
            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-             <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white text-slate-900 rounded-lg font-semibold hover:bg-slate-100 transition-colors group">
-               Start Your Free Trial
+             <Link href="/request-access" className="inline-flex items-center justify-center px-8 py-4 bg-white text-slate-900 rounded-lg font-semibold hover:bg-slate-100 transition-colors group">
+               Request Access
                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-             </Link>
-              <Link href="/demo" className="inline-flex items-center justify-center px-8 py-4 bg-transparent border border-slate-700 text-white rounded-lg font-medium hover:bg-slate-800 transition-colors">
-               Schedule Demo
              </Link>
            </div>
         </div>

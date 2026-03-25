@@ -36,7 +36,7 @@ const features = [
 
 export default function TrustArchitecture() {
   return (
-    <section className="py-24 bg-slate-50 dark:bg-slate-950">
+    <section className="py-24 bg-white dark:bg-slate-900">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-indigo-600 dark:text-indigo-400">Security & Governance</h2>

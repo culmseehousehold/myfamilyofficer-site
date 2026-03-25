@@ -8,9 +8,8 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
+    { name: 'Product Tour', href: '/story' },
     { name: 'Features', href: '/features' },
-    { name: 'Product Tour', href: '/tour' },
-    { name: 'How It Works', href: '/#how-it-works' },
     { name: 'Contact', href: '/#contact' },
   ];
 

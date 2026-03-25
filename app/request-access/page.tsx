@@ -9,7 +9,6 @@ export default function RequestAccessPage() {
     fullName: '',
     workEmail: '',
     organizationType: '',
-    aumRange: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -119,8 +118,8 @@ export default function RequestAccessPage() {
                 <Users className="w-6 h-6 text-blue-400" />
               </div>
               <div className="ml-4">
-                <h3 className="text-lg font-medium text-white">Community & Access</h3>
-                <p className="mt-1 text-slate-400">Join 50+ Australian Family Offices leveraging our platform for deal flow and insights.</p>
+                <h3 className="text-lg font-medium text-white">Built in Australia, for Australia</h3>
+                <p className="mt-1 text-slate-400">Designed around Australian tax law, entity structures, and compliance requirements from day one — not bolted on as an afterthought.</p>
               </div>
             </div>
           </div>
@@ -209,32 +208,6 @@ export default function RequestAccessPage() {
                     <option value="High Net Worth Individual">High Net Worth Individual</option>
                     <option value="Wealth Advisor">Wealth Advisor</option>
                     <option value="Other">Other</option>
-                  </select>
-                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-500">
-                    <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="aumRange" className="block text-sm font-medium text-slate-700 mb-1">
-                  Assets Under Management (Optional)
-                </label>
-                <div className="relative">
-                  <select
-                    id="aumRange"
-                    name="aumRange"
-                    value={formData.aumRange}
-                    onChange={handleChange}
-                    className="block w-full pl-3 pr-10 py-3 text-base border-slate-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md shadow-sm appearance-none bg-white"
-                  >
-                    <option value="" disabled>Select AUM range</option>
-                    <option value="<$10M">&lt; $10M</option>
-                    <option value="$10M-$50M">$10M - $50M</option>
-                    <option value="$50M-$200M">$50M - $200M</option>
-                    <option value="$200M+">$200M+</option>
                   </select>
                   <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-500">
                     <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

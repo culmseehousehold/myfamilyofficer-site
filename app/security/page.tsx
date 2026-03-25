@@ -12,7 +12,7 @@ export default function SecurityPage() {
   const securityFeatures = [
     {
       name: 'Australian Data Residency',
-      description: 'All data is hosted securely in AWS Sydney Region (ap-southeast-2). Your financial data never leaves Australian legal jurisdiction.',
+      description: 'All data is hosted securely in AWS Sydney Region (ap-southeast-2). Engineered for Australian data sovereignty.',
       icon: Globe,
     },
     {

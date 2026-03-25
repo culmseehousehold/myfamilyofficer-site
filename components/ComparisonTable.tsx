@@ -22,13 +22,13 @@ const comparisonData = [
   },
   {
     feature: 'Inter-Entity Loans',
-    legacy: 'Manual reconciliation in Excel',
+    legacy: 'Manual reconciliation in spreadsheets',
     familyOfficer: 'Automated Tracking & Interest Calc',
     highlight: false, // Standard feature
   },
   {
     feature: 'Document Management',
-    legacy: 'Disconnected (SharePoint/Dropbox)',
+    legacy: 'Disconnected (file shares/cloud storage)',
     familyOfficer: 'Context-Aware & Linked to Transactions',
     highlight: false,
   },

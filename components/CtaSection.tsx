@@ -11,11 +11,8 @@ export default function CtaSection() {
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8 text-center">
         <h2 className="text-3xl font-bold font-serif tracking-tight text-white sm:text-4xl">
-          Stop managing your wealth in spreadsheets.
-        </h2>
-        <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-slate-300">
           Join the Family Offices, SMSFs, and Advisory Firms who simply, effectively, dramatically reduce their administrative overhead.
-        </p>
+        </h2>
         <div className="mt-10 flex items-center justify-center gap-x-6">
           <Link
             href="/request-access"
@@ -23,12 +20,12 @@ export default function CtaSection() {
           >
             Request Access
           </Link>
-          <Link href="/how-it-works" className="text-base font-semibold leading-6 text-white hover:text-indigo-300">
+          <Link href="/story" className="text-base font-semibold leading-6 text-white hover:text-indigo-300">
             Learn more <span aria-hidden="true">→</span>
           </Link>
         </div>
         <p className="mt-4 text-sm text-slate-400">
-          Hosted in Australia. Your data never leaves.
+          Hosted in Australia. Engineered for data sovereignty.
         </p>
       </div>
     </div>

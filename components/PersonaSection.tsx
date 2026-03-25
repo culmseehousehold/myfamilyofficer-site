@@ -61,9 +61,9 @@ const personas = [
     title: 'The Compliance Officer',
     subtitle: 'Risk & Policy',
     icon: Scale,
-    description: 'RAG-powered policy verification. Instantly answer "Is this allowed?" and verify adherence to trust deeds and investment mandates.',
+    description: 'AI-powered policy verification. Instantly answer "Is this allowed?" and verify adherence to trust deeds and investment mandates.',
     benefits: [
-        'RAG Policy Search',
+        'AI Policy Search',
         'Audit-Ready Trails',
         'Role-Based Controls',
         'Automated Checks'
@@ -86,7 +86,7 @@ const personas = [
 
 export default function PersonaSection() {
   return (
-    <section className="py-24 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
+    <section className="py-24 bg-slate-50 dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-base font-semibold leading-7 text-indigo-600 dark:text-indigo-400">Used across the family office</h2>
