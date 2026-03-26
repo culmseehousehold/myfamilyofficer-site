@@ -73,7 +73,7 @@ export default function ComparisonTable() {
                   </span>
                 </th>
                 <th className="py-6 px-8 text-sm font-semibold text-indigo-700 uppercase tracking-wider w-1/3 bg-indigo-50/50">
-                  FamilyOfficer
+                  MyFamilyOfficer
                   <span className="block text-xs font-normal text-indigo-600 normal-case mt-1">
                     (The Operating System)
                   </span>
@@ -96,7 +96,7 @@ export default function ComparisonTable() {
                     <span>{row.legacy}</span>
                   </td>
 
-                  {/* FamilyOfficer Column */}
+                  {/* MyFamilyOfficer Column */}
                   <td className="py-6 px-8 text-slate-900 font-medium bg-indigo-50/10 border-l border-indigo-50 group-hover:bg-indigo-50/20 transition-colors relative">
                     <div className="flex items-start gap-3">
                       <div className="bg-green-100/50 rounded-full p-1 shrink-0 mt-0.5">

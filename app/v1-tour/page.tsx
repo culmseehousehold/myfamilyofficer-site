@@ -144,7 +144,7 @@ export default function TourPage() {
         <div className="flex items-center gap-4">
              <Link href="/" className="font-semibold text-lg tracking-tight text-slate-900 hover:text-blue-600 transition-colors flex items-center gap-2">
                 <div className="w-8 h-8 bg-blue-600 text-white rounded-lg flex items-center justify-center font-bold">FO</div>
-                <span className="hidden md:inline">FamilyOfficer</span>
+                <span className="hidden md:inline">MyFamilyOfficer</span>
             </Link>
             <div className="h-6 w-px bg-slate-200 mx-2 hidden md:block" />
             <h1 className="text-sm font-medium text-slate-500 hidden md:block">Product Tour</h1>

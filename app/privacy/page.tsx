@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | FamilyOfficer',
-  description: 'Privacy Policy for FamilyOfficer, operated by Treasury Services Group.',
+  title: 'Privacy Policy | MyFamilyOfficer',
+  description: 'Privacy Policy for MyFamilyOfficer, operated by Treasury Services Group.',
 };
 
 export default function PrivacyPolicy() {
@@ -20,7 +20,7 @@ export default function PrivacyPolicy() {
         <p className="text-base font-semibold leading-7 text-blue-600">Legal</p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">Privacy Policy</h1>
         <p className="mt-6 text-xl leading-8">
-          At FamilyOfficer, we are committed to protecting your privacy. This policy outlines how Treasury Services Group collects, uses, and safeguards your information.
+          At MyFamilyOfficer, we are committed to protecting your privacy. This policy outlines how Treasury Services Group collects, uses, and safeguards your information.
         </p>
         
         <div className="mt-10 max-w-2xl">
@@ -30,7 +30,7 @@ export default function PrivacyPolicy() {
 
           <h2 className="mt-8 text-2xl font-bold tracking-tight text-slate-900 dark:text-white">1. Introduction</h2>
           <p className="mt-6">
-            This Privacy Policy applies to the services provided by Treasury Services Group ("we," "us," or "our") through the FamilyOfficer platform. By accessing or using our services, you agree to the collection and use of information in accordance with this policy.
+            This Privacy Policy applies to the services provided by Treasury Services Group ("we," "us," or "our") through the MyFamilyOfficer platform. By accessing or using our services, you agree to the collection and use of information in accordance with this policy.
           </p>
 
           <h2 className="mt-8 text-2xl font-bold tracking-tight text-slate-900 dark:text-white">2. Information We Collect</h2>

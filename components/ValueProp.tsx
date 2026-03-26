@@ -11,7 +11,7 @@ export default function ValueProp() {
             The New Standard for Wealth Operations
           </h2>
           <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-300">
-            Stop relying on yesterday's numbers. See how FamilyOfficer transforms your operations.
+            Stop relying on yesterday's numbers. See how MyFamilyOfficer transforms your operations.
           </p>
         </div>
 
@@ -56,14 +56,14 @@ export default function ValueProp() {
               </ul>
             </div>
 
-            {/* The FamilyOfficer Way */}
+            {/* The MyFamilyOfficer Way */}
             <div className="relative isolate flex flex-col gap-8 lg:flex-none p-8 rounded-3xl bg-indigo-50 ring-1 ring-indigo-200 shadow-xl shadow-indigo-500/10 dark:bg-indigo-950/30 dark:ring-indigo-800">
               <div className="absolute -top-4 left-8 rounded-full bg-indigo-100 px-4 py-1.5 text-sm font-semibold text-indigo-700 ring-1 ring-inset ring-indigo-600/20 dark:bg-indigo-500/20 dark:text-indigo-300">
-                The FamilyOfficer Way
+                The MyFamilyOfficer Way
               </div>
               <h3 className="text-2xl font-bold leading-8 text-slate-900 mt-2 dark:text-white">Unified & Automated</h3>
               <p className="text-base leading-7 text-slate-600 dark:text-slate-300">
-                One operating system designed for wealth management. FamilyOfficer becomes the connective tissue across all your tools and data.
+                One operating system designed for wealth management. MyFamilyOfficer becomes the connective tissue across all your tools and data.
               </p>
               
               <ul role="list" className="mt-4 space-y-4 text-base leading-7 text-slate-600 dark:text-slate-300">

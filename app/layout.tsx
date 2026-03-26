@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const serif = DM_Serif_Display({ weight: '400', subsets: ['latin'], variable: '--font-serif' });
 
 export const metadata: Metadata = {
-  title: 'FamilyOfficer | The Operating System for Australian Wealth',
+  title: 'MyFamilyOfficer | The Operating System for Australian Wealth',
   description: 'Consolidate your entire wealth ecosystem—trusts, companies, and portfolios—into a single source of truth.',
 };
 

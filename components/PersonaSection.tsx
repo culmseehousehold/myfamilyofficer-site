@@ -94,7 +94,7 @@ export default function PersonaSection() {
             Built for the Family Office
           </p>
           <p className="mt-4 text-lg leading-8 text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-            Whether you are preserving wealth, growing it, or managing it—FamilyOfficer creates a single source of truth for your entire ecosystem.
+            Whether you are preserving wealth, growing it, or managing it—MyFamilyOfficer creates a single source of truth for your entire ecosystem.
           </p>
         </div>
 

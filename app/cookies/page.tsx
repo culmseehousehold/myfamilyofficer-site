@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Cookie Policy | FamilyOfficer',
-  description: 'Cookie Policy for FamilyOfficer. Learn how we use cookies to improve your experience.',
+  title: 'Cookie Policy | MyFamilyOfficer',
+  description: 'Cookie Policy for MyFamilyOfficer. Learn how we use cookies to improve your experience.',
 };
 
 export default function CookiePolicy() {
@@ -20,7 +20,7 @@ export default function CookiePolicy() {
         <p className="text-base font-semibold leading-7 text-blue-600">Legal</p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">Cookie Policy</h1>
         <p className="mt-6 text-xl leading-8">
-          This Cookie Policy explains how Treasury Services Group and its affiliates ("we", "us", and "our") use cookies and similar technologies to recognize you when you visit our website at FamilyOfficer.com.au ("Website").
+          This Cookie Policy explains how Treasury Services Group and its affiliates ("we", "us", and "our") use cookies and similar technologies to recognize you when you visit our website at MyFamilyOfficer.com.au ("Website").
         </p>
         
         <div className="mt-10 max-w-2xl">

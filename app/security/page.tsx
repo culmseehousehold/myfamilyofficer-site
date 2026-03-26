@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import { ShieldCheck, Lock, Server, FileCheck, Key, Globe } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Security & Trust | FamilyOfficer',
+  title: 'Security & Trust | MyFamilyOfficer',
   description: 'Bank-grade security, Australian data residency, and enterprise governance for your family office.',
 };
 

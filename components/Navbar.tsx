@@ -19,7 +19,7 @@ export default function Navbar() {
         <div className="flex justify-between h-16 items-center">
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="text-xl font-bold tracking-tight text-slate-900 dark:text-white font-serif">
-              FamilyOfficer
+              MyFamilyOfficer
             </Link>
           </div>
           

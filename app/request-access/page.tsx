@@ -58,7 +58,7 @@ export default function RequestAccessPage() {
           </div>
           <h2 className="text-2xl font-bold text-slate-900 mb-2">Request Received</h2>
           <p className="text-slate-600 mb-8">
-            Thank you for your interest in FamilyOfficer. We've received your request and a member of our team will review your application shortly.
+            Thank you for your interest in MyFamilyOfficer. We've received your request and a member of our team will review your application shortly.
           </p>
           <Link 
             href="/" 
@@ -89,7 +89,7 @@ export default function RequestAccessPage() {
           </h1>
           
           <p className="text-slate-300 text-lg mb-10">
-            FamilyOfficer provides the intelligent infrastructure sophisticated wealth managers need to scale operations and preserve legacy.
+            MyFamilyOfficer provides the intelligent infrastructure sophisticated wealth managers need to scale operations and preserve legacy.
           </p>
           
           <div className="space-y-6">
@@ -126,7 +126,7 @@ export default function RequestAccessPage() {
         </div>
         
         <div className="relative z-10 text-slate-500 text-sm mt-8">
-          &copy; {new Date().getFullYear()} FamilyOfficer. Confidential & Proprietary.
+          &copy; {new Date().getFullYear()} MyFamilyOfficer. Confidential & Proprietary.
         </div>
       </div>
 

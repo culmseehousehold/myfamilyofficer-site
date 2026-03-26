@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Disclaimer | FamilyOfficer',
-  description: 'Legal disclaimer and limitation of liability for FamilyOfficer.',
+  title: 'Disclaimer | MyFamilyOfficer',
+  description: 'Legal disclaimer and limitation of liability for MyFamilyOfficer.',
 };
 
 export default function Disclaimer() {
@@ -20,7 +20,7 @@ export default function Disclaimer() {
         <p className="text-base font-semibold leading-7 text-blue-600">Legal</p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">Disclaimer</h1>
         <p className="mt-6 text-xl leading-8">
-          The information contained on the FamilyOfficer website (the "Service") is for general information purposes only.
+          The information contained on the MyFamilyOfficer website (the "Service") is for general information purposes only.
         </p>
         
         <div className="mt-10 max-w-2xl">
@@ -30,7 +30,7 @@ export default function Disclaimer() {
 
           <h2 className="mt-8 text-2xl font-bold tracking-tight text-slate-900 dark:text-white">No Financial Advice</h2>
           <p className="mt-6">
-            FamilyOfficer serves as an operating system for wealth management but does not provide financial, tax, or legal advice. The information provided on our website and through our software is not intended to be and does not constitute financial advice, investment advice, trading advice, or any other advice.
+            MyFamilyOfficer serves as an operating system for wealth management but does not provide financial, tax, or legal advice. The information provided on our website and through our software is not intended to be and does not constitute financial advice, investment advice, trading advice, or any other advice.
           </p>
           <p className="mt-4">
             You should not make any decision, financial, investment, trading or otherwise, based on any of the information presented on this website without undertaking independent due diligence and consultation with a professional broker or financial advisory.

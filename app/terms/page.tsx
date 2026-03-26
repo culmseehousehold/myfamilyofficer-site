@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | FamilyOfficer',
-  description: 'Terms of Service for FamilyOfficer, the operating system for Australian Family Offices.',
+  title: 'Terms of Service | MyFamilyOfficer',
+  description: 'Terms of Service for MyFamilyOfficer, the operating system for Australian Family Offices.',
 };
 
 export default function TermsOfService() {
@@ -20,7 +20,7 @@ export default function TermsOfService() {
         <p className="text-base font-semibold leading-7 text-blue-600">Legal</p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">Terms of Service</h1>
         <p className="mt-6 text-xl leading-8">
-          Welcome to FamilyOfficer. By using our platform, you agree to these terms, which govern the relationship between you and Treasury Services Group.
+          Welcome to MyFamilyOfficer. By using our platform, you agree to these terms, which govern the relationship between you and Treasury Services Group.
         </p>
         
         <div className="mt-10 max-w-2xl">
@@ -30,7 +30,7 @@ export default function TermsOfService() {
 
           <h2 className="mt-8 text-2xl font-bold tracking-tight text-slate-900 dark:text-white">1. Acceptance of Terms</h2>
           <p className="mt-6">
-            By accessing or using the FamilyOfficer platform ("Service"), you agree to be bound by these Terms of Service ("Terms"). If you disagree with any part of the terms, you may not access the Service.
+            By accessing or using the MyFamilyOfficer platform ("Service"), you agree to be bound by these Terms of Service ("Terms"). If you disagree with any part of the terms, you may not access the Service.
           </p>
 
           <h2 className="mt-8 text-2xl font-bold tracking-tight text-slate-900 dark:text-white">2. Use License</h2>
@@ -50,12 +50,12 @@ export default function TermsOfService() {
 
           <h2 className="mt-8 text-2xl font-bold tracking-tight text-slate-900 dark:text-white">5. Intellectual Property</h2>
           <p className="mt-6">
-            The Service and its original content, features, and functionality are and will remain the exclusive property of FamilyOfficer and its licensors. The Service is protected by copyright, trademark, and other laws of Australia and foreign countries.
+            The Service and its original content, features, and functionality are and will remain the exclusive property of MyFamilyOfficer and its licensors. The Service is protected by copyright, trademark, and other laws of Australia and foreign countries.
           </p>
 
           <h2 className="mt-8 text-2xl font-bold tracking-tight text-slate-900 dark:text-white">6. Limitation of Liability</h2>
           <p className="mt-6">
-            To the maximum extent permitted by law, in no event shall FamilyOfficer, Treasury Services Group, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses.
+            To the maximum extent permitted by law, in no event shall MyFamilyOfficer, Treasury Services Group, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses.
           </p>
 
           <h2 className="mt-8 text-2xl font-bold tracking-tight text-slate-900 dark:text-white">7. Governing Law</h2>

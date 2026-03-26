@@ -44,7 +44,7 @@ export default function TrustArchitecture() {
             Built for Control
           </p>
           <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-300">
-            Principals, trustees, and advisers need certainty. FamilyOfficer delivers institutional-grade governance.
+            Principals, trustees, and advisers need certainty. MyFamilyOfficer delivers institutional-grade governance.
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">

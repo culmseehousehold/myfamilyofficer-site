@@ -32,11 +32,11 @@ const reasons = [
   },
   {
     title: 'The End of Manual Data Entry',
-    desc: 'Our AI-driven engine automates the heavy lifting. From PDF contract notes to dividend statements, FamilyOfficer ingests, classifies, and reconciles your data.',
+    desc: 'Our AI-driven engine automates the heavy lifting. From PDF contract notes to dividend statements, MyFamilyOfficer ingests, classifies, and reconciles your data.',
   },
   {
     title: 'Australian-First Compliance',
-    desc: 'Global tools fail to understand franking credits, distinct CGT events, and SMSF lodgement rules. FamilyOfficer is built specifically for the Australian regulatory landscape.',
+    desc: 'Global tools fail to understand franking credits, distinct CGT events, and SMSF lodgement rules. MyFamilyOfficer is built specifically for the Australian regulatory landscape.',
   },
 ];
 
